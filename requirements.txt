@@ -1,0 +1,4 @@
+Django==1.9.4
+django-model-utils==2.4
+djangorestframework==3.3.2
+psycopg2==2.6.1
