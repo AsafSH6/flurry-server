@@ -1,5 +1,6 @@
 flurryenv/
 *.pyc
+*.org
 .idea
 *.swp
 *.swo
