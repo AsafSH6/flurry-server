@@ -2,3 +2,4 @@ flurryenv/
 *.pyc
 .idea
 *.swp
+*.swo
