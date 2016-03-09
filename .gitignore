@@ -1,0 +1,4 @@
+flurryenv/
+*.pyc
+.idea
+*.swp
