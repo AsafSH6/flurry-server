@@ -10,24 +10,24 @@
     - [ALTER USER admin WITH SUPERUSER CREATEROLE CREATEDB REPLICATION ;](#sec-3-0-3)
     - [GRANT ALL PRIVILEGES ON DATABASE "flurryDB" to admin;](#sec-3-0-4)
 
-# Flurry - Final Project B.sc Computer Science<a id="orgheadline1"></a>
+# Flurry - Final Project B.sc Computer Science
 
-# Requirements<a id="orgheadline6"></a>
+# Requirements
 
-## sudo apt-get install python-psycopg2<a id="orgheadline2"></a>
+## sudo apt-get install python-psycopg2
 
-## install postgres<a id="orgheadline3"></a>
+## install postgres
 
-## create db in postgres.<a id="orgheadline4"></a>
+## create db in postgres.
 
-## Data.objects.filter(data\_<sub>dates</sub>\_<sub>0</sub>\_<sub>gt</sub>=unicode(dt.datetime.today()))<a id="orgheadline5"></a>
+## Data.objects.filter(data\_<sub>dates</sub>\_<sub>0</sub>\_<sub>gt</sub>=unicode(dt.datetime.today()))
 
-# DB start :<a id="orgheadline11"></a>
+# DB start :<a id="orgheadline11">
 
-### CREATE DATABASE "flurryDB";<a id="orgheadline7"></a>
+### CREATE DATABASE "flurryDB";
 
-### CREATE CREATE USER admin WITH PASSWORD 'admin';<a id="orgheadline8"></a>
+### CREATE CREATE USER admin WITH PASSWORD 'admin';
 
-### ALTER USER admin WITH SUPERUSER CREATEROLE CREATEDB REPLICATION ;<a id="orgheadline9"></a>
+### ALTER USER admin WITH SUPERUSER CREATEROLE CREATEDB REPLICATION ;
 
-### GRANT ALL PRIVILEGES ON DATABASE "flurryDB" to admin;<a id="orgheadline10"></a>
+### GRANT ALL PRIVILEGES ON DATABASE "flurryDB" to admin;
