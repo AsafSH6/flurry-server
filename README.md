@@ -22,7 +22,7 @@
 
 ## Data.objects.filter(data\_<sub>dates</sub>\_<sub>0</sub>\_<sub>gt</sub>=unicode(dt.datetime.today()))
 
-# DB start :<a id="orgheadline11">
+# DB start :
 
 ### CREATE DATABASE "flurryDB";
 
