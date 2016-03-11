@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'flurryapp'
+    'flurryapp',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'flurry.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'test2',
-        'USER': 'test2',
-        'PASSWORD': '1',
+        'NAME': 'flurryDB',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '',
     }

@@ -1,5 +1,54 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from model_utils.managers import QueryManager
-# Create your models here.
+from django.contrib.postgres.fields import JSONField
+
+
+class DataDriver(models.Model):
+    data = JSONField(default={})
+
+    def save(self, *args, **kwargs):
+        super(DataDriver, self).save(*args, **kwargs)
+        return self
+
+
+class Driver(models.Model):
+    name = models.CharField(max_length=255)
+    creation_date = models.DateField(auto_now_add=True)
+    driving_data = models.ForeignKey(DataDriver, related_name='driver')
+
+    def __unicode__(self):
+        return u'{name}, {date}'.format(name=self.name,
+                                        date=self.creation_date.strftime("%d/%m/%y"))
+
+    def save(self, *args, **kwargs):
+        super(Driver, self).save(*args, **kwargs)
+        return self
+
+
+class Car(models.Model):
+    manufacturer = models.CharField(max_length=255)
+    production_year = models.IntegerField()
+    model = models.CharField(max_length=1024)  # VOLKSWAGEN GOLF GTI 1800
+    owner = models.ForeignKey(Driver, related_name='cars')
+
+    def __unicode__(self):
+        return u'{manufacturer}, {production_year}, {model}'.format(manufacturer=self.manufacturer,
+                                                                    production_year=self.production_year,
+                                                                    model=self.model)
+
+    def save(self, *args, **kwargs):
+        super(Car, self).save(*args, **kwargs)
+        return self
+
+
+class Profile(models.Model):
+    driver = models.ForeignKey(Driver, related_name='profiles')
+    avg_rpm = models.FloatField(null=True)
+
+    def __unicode__(self):
+        return u'Profile analysis of driver: {name}'.format(name=self.driver.name)
+
+    def save(self, *args, **kwargs):
+        super(Profile, self).save(*args, **kwargs)
+        return self
