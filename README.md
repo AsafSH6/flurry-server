@@ -1,5 +1,7 @@
 - [Requirements](#sec-2)
 - [DB start :](#sec-3)
+- [Admin :](#sec-4)
+- [REST API :](#sec-5)
 
 # Flurry - Final Project B.sc Computer Science
 
@@ -17,8 +19,24 @@
 
 ### CREATE DATABASE "flurryDB";
 
-### CREATE CREATE USER admin WITH PASSWORD 'admin';
+### CREATE USER admin WITH PASSWORD 'admin';
 
 ### ALTER USER admin WITH SUPERUSER CREATEROLE CREATEDB REPLICATION ;
 
 ### GRANT ALL PRIVILEGES ON DATABASE "flurryDB" to admin;
+
+# Admin:
+
+#### Create super user using the command: python manage.py createsuperuser
+
+#### Run the command: python manage.py runserver
+
+#### Go to: http://127.0.0.1:8000/admin/
+
+#### Log in with your super user credentials
+
+# REST API:
+
+##### python manage.py runserver
+
+##### Go to: http://127.0.0.1/api/v1/flurry/
