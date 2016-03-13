@@ -1,8 +1,9 @@
 - [Flurry - Final Project B.sc Computer Science](#sec-1)
 - [Requirements](#sec-2)
 - [DB start :](#sec-3)
-- [Articles :](#sec-4)
-- [Compability to the OBD-II:](#sec-5)
+- [Admin :](#sec-4)
+- [REST API :](#sec-5)
+- [Compability to the OBD-II:](#sec-6)
 
 # Flurry - Final Project B.sc Computer Science
 
@@ -20,13 +21,28 @@
 
 1.  CREATE DATABASE "flurryDB";
 
-2.  CREATE CREATE USER admin WITH PASSWORD 'admin';
+2.  CREATE USER admin WITH PASSWORD 'admin';
 
 3.  ALTER USER admin WITH SUPERUSER CREATEROLE CREATEDB REPLICATION ;
 
 4.  GRANT ALL PRIVILEGES ON DATABASE "flurryDB" to admin;
 
-# Articles :
+
+# Admin:
+
+#### Create super user using the command: python manage.py createsuperuser
+
+#### Run the command: python manage.py runserver
+
+#### Go to: http://127.0.0.1:8000/admin/
+
+#### Log in with your super user credentials
+
+# REST API:
+
+##### python manage.py runserver
+
+##### Go to: http://127.0.0.1/api/v1/flurry/
 
 # Compability to the OBD-II:
 

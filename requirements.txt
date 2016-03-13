@@ -1,4 +1,7 @@
 Django==1.9.4
 django-model-utils==2.4
 djangorestframework==3.3.2
+drf-extensions==0.2.8
+obd==0.4.1
 psycopg2==2.6.1
+pyserial==3.0.1

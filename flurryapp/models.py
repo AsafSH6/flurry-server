@@ -1,5 +1,4 @@
 from __future__ import unicode_literals
-
 from django.db import models
 from django.contrib.postgres.fields import JSONField
 
@@ -29,7 +28,7 @@ class Driver(models.Model):
 class Car(models.Model):
     manufacturer = models.CharField(max_length=255)
     production_year = models.IntegerField()
-    model = models.CharField(max_length=1024)  # VOLKSWAGEN GOLF GTI 1800
+    model = models.CharField(max_length=1024)  # GOLF GTI 1800
     owner = models.ForeignKey(Driver, related_name='cars')
 
     def __unicode__(self):
