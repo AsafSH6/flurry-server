@@ -5,5 +5,10 @@ from flurryapp.serializers.data_driver_serializer import DataDriverSerializer
 
 
 class DataDriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
+    """
+    ViewSet for DataDriver 
+    NestedViewSetMixin is an Extension for DRF - makes possible to send simple
+        post/get requests.
+    """
     queryset = DataDriver.objects.all()
     serializer_class = DataDriverSerializer

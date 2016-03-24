@@ -4,7 +4,7 @@ from django.contrib.postgres.fields import JSONField
 
 
 class DataDriver(models.Model):
-    data = JSONField(default={})
+    data = JSONField(default=[])
 
     def save(self, *args, **kwargs):
         super(DataDriver, self).save(*args, **kwargs)
