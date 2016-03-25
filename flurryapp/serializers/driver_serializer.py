@@ -4,7 +4,8 @@ from flurryapp.models import Driver
 
 class DriverSerializer(serializers.HyperlinkedModelSerializer):
     profiles = serializers.HyperlinkedRelatedField(many=True, view_name='profiles-detail', read_only=True)
-    driving_data = serializers.HyperlinkedIdentityField(view_name='data-drivers-detail', read_only=True)
+    cars = serializers.HyperlinkedRelatedField(many=True, view_name='cars-detail', read_only=True)
+    driving_data = serializers.HyperlinkedIdentityField(view_name='data-drivers-detail')
 
     """
     profiles - Hyperlinked relationship between DriverModel and Profiles model(
@@ -14,4 +15,4 @@ class DriverSerializer(serializers.HyperlinkedModelSerializer):
     """
     class Meta:
         model = Driver
-        fields = ('id', 'name', 'creation_date', 'driving_data', 'profiles')
+        fields = ('id', 'name', 'creation_date', 'driving_data', 'profiles', 'cars')

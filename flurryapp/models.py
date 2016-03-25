@@ -21,6 +21,10 @@ class Driver(models.Model):
                                         date=self.creation_date.strftime("%d/%m/%y"))
 
     def save(self, *args, **kwargs):
+        try:
+            self.driving_data
+        except DataDriver.DoesNotExist:
+            self.driving_data = DataDriver().save()
         super(Driver, self).save(*args, **kwargs)
         return self
 

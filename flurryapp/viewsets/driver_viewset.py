@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework_extensions import mixins
 from flurryapp.models import Driver
 from flurryapp.serializers.driver_serializer import DriverSerializer
+import json
 
 
 class DriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
