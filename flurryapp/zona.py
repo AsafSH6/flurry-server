@@ -1,7 +1,14 @@
-# import django
-# django.setup()
-# from flurryapp.models import *
-#
+import django
+django.setup()
+
+from flurryapp.models import *
+print len(Driver.objects.get(id=7).driving_data.data[0]['speed'])
+print len(Driver.objects.get(id=7).driving_data.data[0]['rpm'])
+print len(Driver.objects.get(id=7).driving_data.data[0]['throttle_pos'])
+print len(Driver.objects.get(id=7).driving_data.data[0]['engine_load'])
+# print Driver.objects.all()
+# Profile.objects.create_new_profile_for_driver(driver_obj=Driver.objects.get(id=7))
+# print [1, 2] > 5
 # data_driver = DataDriver(data={
 #     'name': 'Mor',
 # }).save()
@@ -29,5 +36,9 @@
 # print driver.profiles.all()
 
 
+# import numpy as np
+#
+# arr = np.array([])
+# print arr.add(1)
 
 
