@@ -1,0 +1,1115 @@
+Starting flurry as ubuntu
+[2016-04-09 11:12:17 +0000] [11391] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f405590e410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f405590e140>
+  pre_fork: <function pre_fork at 0x7f405590e2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f4055983f50>
+  pre_exec: <function pre_exec at 0x7f405590e9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f405590e578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f40559130c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f405590eb18>
+  post_request: <function post_request at 0x7f405590ec08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f405590e6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f405590ed70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f4055983de8>
+  worker_abort: <function worker_abort at 0x7f405590e848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f405590eed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:12:17 +0000] [11391] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:12:17 +0000] [11391] [DEBUG] Arbiter booted
+[2016-04-09 11:12:17 +0000] [11391] [INFO] Listening at: http://0.0.0.0:8001 (11391)
+[2016-04-09 11:12:17 +0000] [11391] [INFO] Using worker: sync
+[2016-04-09 11:12:17 +0000] [11397] [INFO] Booting worker with pid: 11397
+[2016-04-09 11:12:17 +0000] [11398] [INFO] Booting worker with pid: 11398
+[2016-04-09 11:12:17 +0000] [11401] [INFO] Booting worker with pid: 11401
+[2016-04-09 11:12:17 +0000] [11391] [DEBUG] 3 workers
+[2016-04-09 11:25:30 +0000] [11398] [DEBUG] GET /
+Not Found: /
+[2016-04-09 11:25:35 +0000] [11401] [DEBUG] GET /admin/
+[2016-04-09 11:25:35 +0000] [11397] [DEBUG] GET /admin/login/
+[2016-04-09 11:25:39 +0000] [11401] [DEBUG] GET /admin/login/
+[2016-04-09 11:25:47 +0000] [11397] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 11:27:33 +0000] [11398] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 11:28:45 +0000] [11401] [DEBUG] GET /
+Not Found: /
+[2016-04-09 11:34:49 +0000] [11391] [INFO] Handling signal: term
+[2016-04-09 11:34:49 +0000] [11401] [INFO] Worker exiting (pid: 11401)
+[2016-04-09 11:34:49 +0000] [11397] [INFO] Worker exiting (pid: 11397)
+[2016-04-09 11:34:49 +0000] [11398] [INFO] Worker exiting (pid: 11398)
+[2016-04-09 11:34:49 +0000] [11391] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-09 11:34:50 +0000] [12412] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fa5f0be8410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fa5f0be8140>
+  pre_fork: <function pre_fork at 0x7fa5f0be82a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fa5f0c5df50>
+  pre_exec: <function pre_exec at 0x7fa5f0be89b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fa5f0be8578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fa5f0bed0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fa5f0be8b18>
+  post_request: <function post_request at 0x7fa5f0be8c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fa5f0be86e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fa5f0be8d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fa5f0c5dde8>
+  worker_abort: <function worker_abort at 0x7fa5f0be8848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fa5f0be8ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:34:50 +0000] [12412] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:34:50 +0000] [12412] [DEBUG] Arbiter booted
+[2016-04-09 11:34:50 +0000] [12412] [INFO] Listening at: http://0.0.0.0:8001 (12412)
+[2016-04-09 11:34:50 +0000] [12412] [INFO] Using worker: sync
+[2016-04-09 11:34:50 +0000] [12418] [INFO] Booting worker with pid: 12418
+[2016-04-09 11:34:50 +0000] [12421] [INFO] Booting worker with pid: 12421
+[2016-04-09 11:34:50 +0000] [12424] [INFO] Booting worker with pid: 12424
+[2016-04-09 11:34:50 +0000] [12412] [DEBUG] 3 workers
+[2016-04-09 11:34:59 +0000] [12421] [DEBUG] GET /
+/home/ubuntu/flurry/flurry/urls.py:23: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.generic.simple.direct_to_template). Pass the callable instead.
+  url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'homepage.html'}, name='index'),
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 376, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 248, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 124, in get_callable
+    (lookup_view, mod_name))
+ViewDoesNotExist: Could not import 'django.views.generic.simple.direct_to_template'. Parent module django.views.generic.simple does not exist.
+[2016-04-09 11:37:42 +0000] [12412] [INFO] Handling signal: term
+[2016-04-09 11:37:42 +0000] [12424] [INFO] Worker exiting (pid: 12424)
+[2016-04-09 11:37:42 +0000] [12418] [INFO] Worker exiting (pid: 12418)
+[2016-04-09 11:37:42 +0000] [12421] [INFO] Worker exiting (pid: 12421)
+[2016-04-09 11:37:42 +0000] [12412] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-09 11:37:43 +0000] [12441] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f647f371410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f647f371140>
+  pre_fork: <function pre_fork at 0x7f647f3712a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f647f3e6f50>
+  pre_exec: <function pre_exec at 0x7f647f3719b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f647f371578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f647f3760c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f647f371b18>
+  post_request: <function post_request at 0x7f647f371c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f647f3716e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f647f371d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f647f3e6de8>
+  worker_abort: <function worker_abort at 0x7f647f371848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f647f371ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:37:43 +0000] [12441] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:37:43 +0000] [12441] [DEBUG] Arbiter booted
+[2016-04-09 11:37:43 +0000] [12441] [INFO] Listening at: http://0.0.0.0:8001 (12441)
+[2016-04-09 11:37:43 +0000] [12441] [INFO] Using worker: sync
+[2016-04-09 11:37:43 +0000] [12447] [INFO] Booting worker with pid: 12447
+[2016-04-09 11:37:43 +0000] [12450] [INFO] Booting worker with pid: 12450
+[2016-04-09 11:37:43 +0000] [12451] [INFO] Booting worker with pid: 12451
+[2016-04-09 11:37:43 +0000] [12441] [DEBUG] 3 workers
+[2016-04-09 11:37:47 +0000] [12450] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: static/homepage.html
+[2016-04-09 11:37:53 +0000] [12451] [DEBUG] GET /home
+Not Found: /home
+[2016-04-09 11:37:59 +0000] [12450] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: static/homepage.html
+[2016-04-09 11:40:30 +0000] [12447] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: static/homepage.html
+[2016-04-09 11:40:33 +0000] [12450] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: static/homepage.html
+[2016-04-09 11:40:42 +0000] [12447] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: static/homepage.html
+[2016-04-09 11:41:24 +0000] [12441] [INFO] Handling signal: term
+[2016-04-09 11:41:24 +0000] [12450] [INFO] Worker exiting (pid: 12450)
+[2016-04-09 11:41:24 +0000] [12451] [INFO] Worker exiting (pid: 12451)
+[2016-04-09 11:41:24 +0000] [12447] [INFO] Worker exiting (pid: 12447)
+[2016-04-09 11:41:24 +0000] [12441] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-09 11:41:25 +0000] [12487] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f110578a410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f110578a140>
+  pre_fork: <function pre_fork at 0x7f110578a2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f11057fff50>
+  pre_exec: <function pre_exec at 0x7f110578a9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f110578a578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f110578f0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f110578ab18>
+  post_request: <function post_request at 0x7f110578ac08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f110578a6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f110578ad70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f11057ffde8>
+  worker_abort: <function worker_abort at 0x7f110578a848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f110578aed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:41:25 +0000] [12487] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:41:25 +0000] [12487] [DEBUG] Arbiter booted
+[2016-04-09 11:41:25 +0000] [12487] [INFO] Listening at: http://0.0.0.0:8001 (12487)
+[2016-04-09 11:41:25 +0000] [12487] [INFO] Using worker: sync
+[2016-04-09 11:41:25 +0000] [12493] [INFO] Booting worker with pid: 12493
+[2016-04-09 11:41:25 +0000] [12496] [INFO] Booting worker with pid: 12496
+[2016-04-09 11:41:25 +0000] [12497] [INFO] Booting worker with pid: 12497
+[2016-04-09 11:41:25 +0000] [12487] [DEBUG] 3 workers
+[2016-04-09 11:41:28 +0000] [12496] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: homepage.html
+[2016-04-09 11:41:33 +0000] [12497] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: homepage.html
+[2016-04-09 11:41:55 +0000] [12496] [DEBUG] GET /home/ubuntu/flurry/logs/nginx-access.log
+Not Found: /home/ubuntu/flurry/logs/nginx-access.log
+[2016-04-09 11:42:12 +0000] [12493] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: homepage.html
+[2016-04-09 11:43:16 +0000] [12487] [INFO] Handling signal: term
+[2016-04-09 11:43:16 +0000] [12496] [INFO] Worker exiting (pid: 12496)
+[2016-04-09 11:43:16 +0000] [12497] [INFO] Worker exiting (pid: 12497)
+[2016-04-09 11:43:16 +0000] [12493] [INFO] Worker exiting (pid: 12493)
+[2016-04-09 11:43:16 +0000] [12487] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-09 11:43:17 +0000] [12513] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f7fa3225410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f7fa3225140>
+  pre_fork: <function pre_fork at 0x7f7fa32252a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f7fa329af50>
+  pre_exec: <function pre_exec at 0x7f7fa32259b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f7fa3225578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f7fa322a0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f7fa3225b18>
+  post_request: <function post_request at 0x7f7fa3225c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f7fa32256e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f7fa3225d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f7fa329ade8>
+  worker_abort: <function worker_abort at 0x7f7fa3225848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f7fa3225ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:43:17 +0000] [12513] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:43:17 +0000] [12513] [DEBUG] Arbiter booted
+[2016-04-09 11:43:17 +0000] [12513] [INFO] Listening at: http://0.0.0.0:8001 (12513)
+[2016-04-09 11:43:17 +0000] [12513] [INFO] Using worker: sync
+[2016-04-09 11:43:17 +0000] [12519] [INFO] Booting worker with pid: 12519
+[2016-04-09 11:43:17 +0000] [12520] [INFO] Booting worker with pid: 12520
+[2016-04-09 11:43:17 +0000] [12523] [INFO] Booting worker with pid: 12523
+[2016-04-09 11:43:17 +0000] [12513] [DEBUG] 3 workers
+[2016-04-09 11:43:20 +0000] [12520] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: /static/homepage.html
+[2016-04-09 11:43:21 +0000] [12523] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 135, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 90, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 74, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+TemplateDoesNotExist: /static/homepage.html
+[2016-04-09 11:53:35 +0000] [12513] [INFO] Handling signal: term
+[2016-04-09 11:53:35 +0000] [12520] [INFO] Worker exiting (pid: 12520)
+[2016-04-09 11:53:35 +0000] [12523] [INFO] Worker exiting (pid: 12523)
+[2016-04-09 11:53:35 +0000] [12519] [INFO] Worker exiting (pid: 12519)
+[2016-04-09 11:53:35 +0000] [12513] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-09 11:53:36 +0000] [12652] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fe82f78c410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fe82f78c140>
+  pre_fork: <function pre_fork at 0x7fe82f78c2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fe82f801f50>
+  pre_exec: <function pre_exec at 0x7fe82f78c9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fe82f78c578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fe82f7910c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fe82f78cb18>
+  post_request: <function post_request at 0x7fe82f78cc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fe82f78c6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fe82f78cd70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fe82f801de8>
+  worker_abort: <function worker_abort at 0x7fe82f78c848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fe82f78ced8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:53:36 +0000] [12652] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:53:36 +0000] [12652] [DEBUG] Arbiter booted
+[2016-04-09 11:53:36 +0000] [12652] [INFO] Listening at: http://0.0.0.0:8001 (12652)
+[2016-04-09 11:53:36 +0000] [12652] [INFO] Using worker: sync
+[2016-04-09 11:53:36 +0000] [12658] [INFO] Booting worker with pid: 12658
+[2016-04-09 11:53:36 +0000] [12659] [INFO] Booting worker with pid: 12659
+[2016-04-09 11:53:36 +0000] [12664] [INFO] Booting worker with pid: 12664
+[2016-04-09 11:53:36 +0000] [12652] [DEBUG] 3 workers
+[2016-04-09 11:53:44 +0000] [12659] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/ubuntu/flurry/flurry/urls.py", line 18, in <module>
+    import flurryapp.urls
+  File "/home/ubuntu/flurry/flurryapp/urls.py", line 21, in <module>
+    urlpatterns =[url(r'^$', views.index, name='index')] + router.urls
+NameError: name 'views' is not defined
+[2016-04-09 11:54:35 +0000] [12652] [INFO] Handling signal: term
+[2016-04-09 11:54:35 +0000] [12664] [INFO] Worker exiting (pid: 12664)
+[2016-04-09 11:54:35 +0000] [12658] [INFO] Worker exiting (pid: 12658)
+[2016-04-09 11:54:35 +0000] [12659] [INFO] Worker exiting (pid: 12659)
+[2016-04-09 11:54:35 +0000] [12652] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-09 11:54:37 +0000] [12674] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fedfcfe4410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fedfcfe4140>
+  pre_fork: <function pre_fork at 0x7fedfcfe42a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fedfd059f50>
+  pre_exec: <function pre_exec at 0x7fedfcfe49b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fedfcfe4578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fedfcfe90c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fedfcfe4b18>
+  post_request: <function post_request at 0x7fedfcfe4c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fedfcfe46e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fedfcfe4d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fedfd059de8>
+  worker_abort: <function worker_abort at 0x7fedfcfe4848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fedfcfe4ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:54:37 +0000] [12674] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:54:37 +0000] [12674] [DEBUG] Arbiter booted
+[2016-04-09 11:54:37 +0000] [12674] [INFO] Listening at: http://0.0.0.0:8001 (12674)
+[2016-04-09 11:54:37 +0000] [12674] [INFO] Using worker: sync
+[2016-04-09 11:54:37 +0000] [12680] [INFO] Booting worker with pid: 12680
+[2016-04-09 11:54:37 +0000] [12681] [INFO] Booting worker with pid: 12681
+[2016-04-09 11:54:37 +0000] [12686] [INFO] Booting worker with pid: 12686
+[2016-04-09 11:54:37 +0000] [12674] [DEBUG] 3 workers
+[2016-04-09 11:54:39 +0000] [12681] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/ubuntu/flurry/flurry/urls.py", line 18, in <module>
+    import flurryapp.urls
+  File "/home/ubuntu/flurry/flurryapp/urls.py", line 21, in <module>
+    urlpatterns =[url(r'^$', views.index, name='index')] + router.urls
+NameError: name 'views' is not defined
+[2016-04-09 11:54:41 +0000] [12686] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/ubuntu/flurry/flurry/urls.py", line 18, in <module>
+    import flurryapp.urls
+  File "/home/ubuntu/flurry/flurryapp/urls.py", line 21, in <module>
+    urlpatterns =[url(r'^$', views.index, name='index')] + router.urls
+NameError: name 'views' is not defined
+[2016-04-09 11:55:20 +0000] [12674] [INFO] Handling signal: term
+[2016-04-09 11:55:20 +0000] [12680] [INFO] Worker exiting (pid: 12680)
+[2016-04-09 11:55:20 +0000] [12681] [INFO] Worker exiting (pid: 12681)
+[2016-04-09 11:55:20 +0000] [12686] [INFO] Worker exiting (pid: 12686)
+[2016-04-09 11:55:20 +0000] [12674] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-09 11:55:21 +0000] [12708] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fe9db6da410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fe9db6da140>
+  pre_fork: <function pre_fork at 0x7fe9db6da2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fe9db74ff50>
+  pre_exec: <function pre_exec at 0x7fe9db6da9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fe9db6da578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fe9db6df0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fe9db6dab18>
+  post_request: <function post_request at 0x7fe9db6dac08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fe9db6da6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fe9db6dad70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fe9db74fde8>
+  worker_abort: <function worker_abort at 0x7fe9db6da848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fe9db6daed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:55:21 +0000] [12708] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:55:21 +0000] [12708] [DEBUG] Arbiter booted
+[2016-04-09 11:55:21 +0000] [12708] [INFO] Listening at: http://0.0.0.0:8001 (12708)
+[2016-04-09 11:55:21 +0000] [12708] [INFO] Using worker: sync
+[2016-04-09 11:55:21 +0000] [12714] [INFO] Booting worker with pid: 12714
+[2016-04-09 11:55:21 +0000] [12715] [INFO] Booting worker with pid: 12715
+[2016-04-09 11:55:21 +0000] [12716] [INFO] Booting worker with pid: 12716
+[2016-04-09 11:55:21 +0000] [12708] [DEBUG] 3 workers
+[2016-04-09 11:55:24 +0000] [12715] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/flurry/flurryapp/views.py", line 12, in index
+    return render(request, html)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: 
+    <p><h3><b>Flurry Project<b><h3><p>
+
+    <br><a href="api/v1/flurry/">API</a></br>
+    <br><a href="admin/">Admin Page</a></br>
+    
+[2016-04-09 11:55:39 +0000] [12716] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/flurry/flurryapp/views.py", line 12, in index
+    return render(request, html)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: 
+    <p><h3><b>Flurry Project<b><h3><p>
+
+    <br><a href="api/v1/flurry/">API</a></br>
+    <br><a href="admin/">Admin Page</a></br>
+    
+[2016-04-09 11:56:43 +0000] [12708] [INFO] Handling signal: term
+[2016-04-09 11:56:43 +0000] [12714] [INFO] Worker exiting (pid: 12714)
+[2016-04-09 11:56:43 +0000] [12715] [INFO] Worker exiting (pid: 12715)
+[2016-04-09 11:56:43 +0000] [12716] [INFO] Worker exiting (pid: 12716)
+[2016-04-09 11:56:43 +0000] [12708] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-09 11:56:44 +0000] [12732] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f8c13340410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f8c13340140>
+  pre_fork: <function pre_fork at 0x7f8c133402a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f8c133b5f50>
+  pre_exec: <function pre_exec at 0x7f8c133409b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f8c13340578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f8c133450c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f8c13340b18>
+  post_request: <function post_request at 0x7f8c13340c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f8c133406e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f8c13340d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f8c133b5de8>
+  worker_abort: <function worker_abort at 0x7f8c13340848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f8c13340ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-09 11:56:44 +0000] [12732] [INFO] Starting gunicorn 19.4.5
+[2016-04-09 11:56:44 +0000] [12732] [DEBUG] Arbiter booted
+[2016-04-09 11:56:44 +0000] [12732] [INFO] Listening at: http://0.0.0.0:8001 (12732)
+[2016-04-09 11:56:44 +0000] [12732] [INFO] Using worker: sync
+[2016-04-09 11:56:44 +0000] [12738] [INFO] Booting worker with pid: 12738
+[2016-04-09 11:56:44 +0000] [12741] [INFO] Booting worker with pid: 12741
+[2016-04-09 11:56:44 +0000] [12742] [INFO] Booting worker with pid: 12742
+[2016-04-09 11:56:44 +0000] [12732] [DEBUG] 3 workers
+[2016-04-09 11:56:47 +0000] [12741] [DEBUG] GET /
+[2016-04-09 11:56:51 +0000] [12742] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 11:56:58 +0000] [12741] [DEBUG] GET /admin/
+[2016-04-09 11:56:58 +0000] [12742] [DEBUG] GET /admin/login/
+[2016-04-09 11:57:59 +0000] [12738] [DEBUG] GET /admin/
+[2016-04-09 11:57:59 +0000] [12742] [DEBUG] GET /admin/login/
+[2016-04-09 11:58:05 +0000] [12738] [DEBUG] POST /admin/login/
+[2016-04-09 11:58:05 +0000] [12742] [DEBUG] GET /admin/

@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 
 SUPER USER:
-    username: asaf
+    username: ubuntu
     password: A12345678
 """
 
@@ -29,7 +29,7 @@ SECRET_KEY = 'ub491*rzo*5h1cw0ay8ywslt)zqgkn#-%*@ef_%ch76&(w(@8u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -138,4 +138,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+STATIC_ROOT = '/home/ubuntu/flurry/flurry/static'
 STATIC_URL = '/static/'
+
+STATICFILES_DIRs = (
+	os.path.join(BASE_DIR, 'static'),
+)

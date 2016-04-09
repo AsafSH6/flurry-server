@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 import flurryapp.urls
+import flurryapp.views
 
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^$', flurryapp.views.index, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^api/v1/flurry/', include(flurryapp.urls)),
 ]
