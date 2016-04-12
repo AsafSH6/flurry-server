@@ -1113,3 +1113,479 @@ Starting flurry as ubuntu
 [2016-04-09 11:57:59 +0000] [12742] [DEBUG] GET /admin/login/
 [2016-04-09 11:58:05 +0000] [12738] [DEBUG] POST /admin/login/
 [2016-04-09 11:58:05 +0000] [12742] [DEBUG] GET /admin/
+[2016-04-09 11:59:29 +0000] [12742] [DEBUG] GET /
+[2016-04-09 11:59:29 +0000] [12741] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 11:59:32 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 11:59:35 +0000] [12741] [DEBUG] GET /admin/
+[2016-04-09 11:59:36 +0000] [12742] [DEBUG] GET /admin/login/
+[2016-04-09 12:00:04 +0000] [12741] [DEBUG] GET /
+[2016-04-09 12:00:08 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:00:13 +0000] [12742] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-09 12:00:21 +0000] [12738] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-09 12:00:26 +0000] [12741] [DEBUG] GET /api/v1/flurry/profiles/
+[2016-04-09 12:00:32 +0000] [12738] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-09 12:01:41 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:02:27 +0000] [12741] [DEBUG] GET /
+[2016-04-09 12:02:30 +0000] [12742] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:02:40 +0000] [12741] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-09 12:02:59 +0000] [12742] [DEBUG] POST /api/v1/flurry/drivers/
+[2016-04-09 12:03:14 +0000] [12738] [DEBUG] POST /api/v1/flurry/drivers/
+[2016-04-09 12:03:21 +0000] [12741] [DEBUG] POST /api/v1/flurry/drivers/
+[2016-04-09 12:03:23 +0000] [12742] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:03:25 +0000] [12741] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-09 12:03:42 +0000] [12742] [DEBUG] GET /api/v1/flurry/data-drivers/1/
+[2016-04-09 12:03:48 +0000] [12741] [DEBUG] GET /api/v1/flurry/data-drivers/3/
+[2016-04-09 12:23:31 +0000] [12742] [DEBUG] GET /
+[2016-04-09 12:23:31 +0000] [12738] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 12:23:34 +0000] [12741] [DEBUG] GET /admin/
+[2016-04-09 12:23:35 +0000] [12742] [DEBUG] GET /admin/login/
+[2016-04-09 12:23:38 +0000] [12741] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:29:03 +0000] [12738] [DEBUG] GET /
+[2016-04-09 12:29:11 +0000] [12741] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:29:27 +0000] [12742] [DEBUG] GET /admin/
+[2016-04-09 12:29:28 +0000] [12738] [DEBUG] GET /admin/login/
+[2016-04-09 12:31:49 +0000] [12742] [DEBUG] GET /
+[2016-04-09 12:34:25 +0000] [12738] [DEBUG] GET /
+[2016-04-09 12:34:28 +0000] [12741] [DEBUG] GET /admin/
+[2016-04-09 12:34:28 +0000] [12742] [DEBUG] GET /admin/login/
+[2016-04-09 12:37:47 +0000] [12742] [DEBUG] GET /
+[2016-04-09 12:37:47 +0000] [12741] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 12:46:53 +0000] [12741] [DEBUG] GET /
+[2016-04-09 12:46:53 +0000] [12742] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 12:46:57 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:47:17 +0000] [12742] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-09 12:47:48 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:47:52 +0000] [12742] [DEBUG] GET /admin/
+[2016-04-09 12:47:52 +0000] [12741] [DEBUG] GET /admin/login/
+[2016-04-09 12:48:03 +0000] [12742] [DEBUG] POST /admin/login/
+[2016-04-09 12:48:05 +0000] [12741] [DEBUG] GET /admin/login/
+[2016-04-09 12:48:07 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:48:12 +0000] [12741] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-09 12:55:35 +0000] [12741] [DEBUG] GET /
+[2016-04-09 12:55:35 +0000] [12742] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 12:55:36 +0000] [12738] [DEBUG] GET /
+[2016-04-09 12:55:37 +0000] [12741] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 12:55:39 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:55:49 +0000] [12741] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-09 12:55:54 +0000] [12742] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:55:58 +0000] [12741] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-09 12:56:09 +0000] [12742] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-09 12:56:15 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:56:19 +0000] [12741] [DEBUG] GET /admin/
+[2016-04-09 12:56:19 +0000] [12742] [DEBUG] GET /admin/login/
+[2016-04-09 12:58:43 +0000] [12742] [DEBUG] GET /
+[2016-04-09 12:58:45 +0000] [12741] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 12:58:56 +0000] [12742] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-09 12:59:34 +0000] [12741] [DEBUG] GET /
+[2016-04-09 12:59:35 +0000] [12738] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 13:00:07 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 13:01:29 +0000] [12742] [DEBUG] GET /admin/
+[2016-04-09 13:01:30 +0000] [12738] [DEBUG] GET /admin/login/
+[2016-04-09 13:19:03 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 13:19:05 +0000] [12741] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-09 13:19:12 +0000] [12738] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-09 13:19:14 +0000] [12741] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-09 13:19:17 +0000] [12738] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-09 13:19:19 +0000] [12741] [DEBUG] GET /api/v1/flurry/profiles/
+[2016-04-09 13:23:16 +0000] [12742] [DEBUG] GET /
+[2016-04-09 13:23:20 +0000] [12738] [DEBUG] GET /admin/
+[2016-04-09 13:23:30 +0000] [12741] [DEBUG] GET /admin/auth/user/
+[2016-04-09 13:23:31 +0000] [12738] [DEBUG] GET /admin/jsi18n/
+[2016-04-09 13:23:34 +0000] [12742] [DEBUG] GET /admin/auth/user/1/change/
+[2016-04-09 13:23:34 +0000] [12738] [DEBUG] GET /admin/jsi18n/
+[2016-04-09 13:24:45 +0000] [12738] [DEBUG] GET /admin/auth/user/
+[2016-04-09 13:24:50 +0000] [12742] [DEBUG] GET /admin/auth/
+[2016-04-09 13:24:52 +0000] [12738] [DEBUG] GET /admin/
+[2016-04-09 13:29:49 +0000] [12738] [DEBUG] GET /
+[2016-04-09 13:29:49 +0000] [12742] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 13:29:50 +0000] [12741] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 13:34:32 +0000] [12741] [DEBUG] GET /
+[2016-04-09 13:34:32 +0000] [12742] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 13:34:35 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 13:34:39 +0000] [12742] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-09 13:34:41 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 13:34:44 +0000] [12742] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-09 13:34:47 +0000] [12738] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-09 13:34:53 +0000] [12742] [DEBUG] GET /admin/
+[2016-04-09 13:34:53 +0000] [12741] [DEBUG] GET /admin/login/
+[2016-04-09 13:34:57 +0000] [12742] [DEBUG] POST /admin/login/
+[2016-04-09 13:35:03 +0000] [12741] [DEBUG] POST /admin/login/
+[2016-04-09 13:35:08 +0000] [12738] [DEBUG] POST /admin/login/
+[2016-04-09 13:35:15 +0000] [12741] [DEBUG] GET /
+[2016-04-09 13:43:50 +0000] [12741] [DEBUG] GET /
+[2016-04-09 13:44:21 +0000] [12741] [DEBUG] GET /
+[2016-04-09 13:44:37 +0000] [12742] [DEBUG] GET /
+[2016-04-09 13:44:38 +0000] [12741] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 13:44:51 +0000] [12738] [DEBUG] GET /admin/
+[2016-04-09 13:44:51 +0000] [12742] [DEBUG] GET /admin/login/
+[2016-04-09 13:47:41 +0000] [12738] [DEBUG] GET /
+[2016-04-09 13:58:15 +0000] [12741] [DEBUG] GET /
+[2016-04-09 13:58:16 +0000] [12738] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 13:58:18 +0000] [12742] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 13:58:19 +0000] [12738] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 13:58:21 +0000] [12741] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 14:07:40 +0000] [12741] [DEBUG] GET /manager/html
+Not Found: /manager/html
+[2016-04-09 17:09:27 +0000] [12741] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-09 17:09:29 +0000] [12738] [DEBUG] GET /
+[2016-04-09 17:09:31 +0000] [12742] [DEBUG] GET /api/v1/flurry/
+[2016-04-09 17:09:36 +0000] [12738] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-09 17:09:53 +0000] [12742] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-09 17:10:53 +0000] [12738] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-09 17:57:01 +0000] [12742] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-09 21:16:26 +0000] [12741] [DEBUG] GET /cache/global/img/gs.gif
+Not Found: /cache/global/img/gs.gif
+[2016-04-10 01:11:08 +0000] [12742] [DEBUG] GET /
+[2016-04-10 03:19:24 +0000] [12738] [DEBUG] GET /xmlrpc.php
+Not Found: /xmlrpc.php
+[2016-04-10 06:51:21 +0000] [12741] [DEBUG] GET /
+[2016-04-10 06:51:22 +0000] [12742] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-10 06:51:23 +0000] [12738] [DEBUG] GET /api/v1/flurry/
+[2016-04-10 06:51:26 +0000] [12742] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-10 09:37:27 +0000] [12742] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-10 15:31:28 +0000] [12738] [DEBUG] GET /xmlrpc.php
+Not Found: /xmlrpc.php
+[2016-04-10 17:45:37 +0000] [12741] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-11 05:19:05 +0000] [12741] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-11 07:01:01 +0000] [12742] [DEBUG] HEAD /irj/portal
+Not Found: /irj/portal
+[2016-04-11 09:26:23 +0000] [12741] [DEBUG] GET /
+[2016-04-11 09:26:23 +0000] [12738] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-11 09:26:25 +0000] [12742] [DEBUG] GET /api/v1/flurry/
+[2016-04-11 09:26:35 +0000] [12738] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-11 09:26:42 +0000] [12741] [DEBUG] GET /api/v1/flurry/data-drivers/1/
+[2016-04-11 09:26:45 +0000] [12742] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-11 09:26:46 +0000] [12741] [DEBUG] GET /api/v1/flurry/
+[2016-04-11 09:26:54 +0000] [12742] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-11 09:27:00 +0000] [12738] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-11 09:27:04 +0000] [12742] [DEBUG] GET /admin/
+[2016-04-11 09:27:04 +0000] [12741] [DEBUG] GET /admin/login/
+[2016-04-11 09:27:09 +0000] [12742] [DEBUG] POST /admin/login/
+[2016-04-11 09:27:11 +0000] [12741] [DEBUG] GET /admin/
+[2016-04-11 09:27:16 +0000] [12742] [DEBUG] GET /admin/flurryapp/driver/
+[2016-04-11 09:27:16 +0000] [12738] [DEBUG] GET /admin/jsi18n/
+[2016-04-11 09:27:20 +0000] [12741] [DEBUG] GET /admin/
+[2016-04-11 17:18:33 +0000] [12738] [DEBUG] GET /xmlrpc.php
+Not Found: /xmlrpc.php
+[2016-04-12 00:18:00 +0000] [12738] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-12 05:10:44 +0000] [12742] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-12 08:40:02 +0000] [12738] [DEBUG] GET /
+[2016-04-12 08:40:02 +0000] [12742] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-12 09:41:34 +0000] [12742] [DEBUG] GET /
+[2016-04-12 09:41:34 +0000] [12738] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-12 09:42:10 +0000] [12732] [INFO] Handling signal: term
+[2016-04-12 09:42:10 +0000] [12738] [INFO] Worker exiting (pid: 12738)
+[2016-04-12 09:42:10 +0000] [12741] [INFO] Worker exiting (pid: 12741)
+[2016-04-12 09:42:10 +0000] [12742] [INFO] Worker exiting (pid: 12742)
+[2016-04-12 09:42:10 +0000] [12732] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-12 09:42:11 +0000] [28317] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f7172aab410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f7172aab140>
+  pre_fork: <function pre_fork at 0x7f7172aab2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f7172b20f50>
+  pre_exec: <function pre_exec at 0x7f7172aab9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f7172aab578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f7172ab00c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f7172aabb18>
+  post_request: <function post_request at 0x7f7172aabc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f7172aab6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f7172aabd70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f7172b20de8>
+  worker_abort: <function worker_abort at 0x7f7172aab848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f7172aabed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-12 09:42:11 +0000] [28317] [INFO] Starting gunicorn 19.4.5
+[2016-04-12 09:42:11 +0000] [28317] [DEBUG] Arbiter booted
+[2016-04-12 09:42:11 +0000] [28317] [INFO] Listening at: http://0.0.0.0:8001 (28317)
+[2016-04-12 09:42:11 +0000] [28317] [INFO] Using worker: sync
+[2016-04-12 09:42:11 +0000] [28323] [INFO] Booting worker with pid: 28323
+[2016-04-12 09:42:11 +0000] [28326] [INFO] Booting worker with pid: 28326
+[2016-04-12 09:42:11 +0000] [28327] [INFO] Booting worker with pid: 28327
+[2016-04-12 09:42:11 +0000] [28317] [DEBUG] 3 workers
+[2016-04-12 09:42:14 +0000] [28326] [DEBUG] GET /
+[2016-04-12 09:42:16 +0000] [28327] [DEBUG] GET /
+[2016-04-12 09:43:59 +0000] [28323] [DEBUG] GET /api/v1/flurry/
+[2016-04-12 09:44:17 +0000] [28327] [DEBUG] GET /
+[2016-04-12 09:46:04 +0000] [28323] [DEBUG] GET /
+[2016-04-12 09:48:56 +0000] [28317] [INFO] Handling signal: term
+[2016-04-12 09:48:56 +0000] [28323] [INFO] Worker exiting (pid: 28323)
+[2016-04-12 09:48:56 +0000] [28326] [INFO] Worker exiting (pid: 28326)
+[2016-04-12 09:48:56 +0000] [28327] [INFO] Worker exiting (pid: 28327)
+[2016-04-12 09:48:56 +0000] [28317] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-12 09:48:57 +0000] [28461] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f63d9dc9410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f63d9dc9140>
+  pre_fork: <function pre_fork at 0x7f63d9dc92a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f63d9e3ef50>
+  pre_exec: <function pre_exec at 0x7f63d9dc99b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f63d9dc9578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f63d9dce0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f63d9dc9b18>
+  post_request: <function post_request at 0x7f63d9dc9c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f63d9dc96e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f63d9dc9d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f63d9e3ede8>
+  worker_abort: <function worker_abort at 0x7f63d9dc9848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f63d9dc9ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-12 09:48:57 +0000] [28461] [INFO] Starting gunicorn 19.4.5
+[2016-04-12 09:48:57 +0000] [28461] [DEBUG] Arbiter booted
+[2016-04-12 09:48:57 +0000] [28461] [INFO] Listening at: http://0.0.0.0:8001 (28461)
+[2016-04-12 09:48:57 +0000] [28461] [INFO] Using worker: sync
+[2016-04-12 09:48:57 +0000] [28467] [INFO] Booting worker with pid: 28467
+[2016-04-12 09:48:57 +0000] [28470] [INFO] Booting worker with pid: 28470
+[2016-04-12 09:48:57 +0000] [28471] [INFO] Booting worker with pid: 28471
+[2016-04-12 09:48:57 +0000] [28461] [DEBUG] 3 workers
+[2016-04-12 09:49:01 +0000] [28470] [DEBUG] GET /
+[2016-04-12 09:53:16 +0000] [28461] [INFO] Handling signal: term
+[2016-04-12 09:53:16 +0000] [28467] [INFO] Worker exiting (pid: 28467)
+[2016-04-12 09:53:16 +0000] [28470] [INFO] Worker exiting (pid: 28470)
+[2016-04-12 09:53:16 +0000] [28471] [INFO] Worker exiting (pid: 28471)
+[2016-04-12 09:53:16 +0000] [28461] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-12 09:53:17 +0000] [28526] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fe161d02410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fe161d02140>
+  pre_fork: <function pre_fork at 0x7fe161d022a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fe161d77f50>
+  pre_exec: <function pre_exec at 0x7fe161d029b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fe161d02578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fe161d070c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fe161d02b18>
+  post_request: <function post_request at 0x7fe161d02c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fe161d026e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fe161d02d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fe161d77de8>
+  worker_abort: <function worker_abort at 0x7fe161d02848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fe161d02ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-12 09:53:17 +0000] [28526] [INFO] Starting gunicorn 19.4.5
+[2016-04-12 09:53:17 +0000] [28526] [DEBUG] Arbiter booted
+[2016-04-12 09:53:17 +0000] [28526] [INFO] Listening at: http://0.0.0.0:8001 (28526)
+[2016-04-12 09:53:17 +0000] [28526] [INFO] Using worker: sync
+[2016-04-12 09:53:17 +0000] [28532] [INFO] Booting worker with pid: 28532
+[2016-04-12 09:53:17 +0000] [28535] [INFO] Booting worker with pid: 28535
+[2016-04-12 09:53:17 +0000] [28526] [DEBUG] 3 workers
+[2016-04-12 09:53:17 +0000] [28536] [INFO] Booting worker with pid: 28536
+[2016-04-12 09:53:20 +0000] [28535] [DEBUG] GET /
+[2016-04-12 09:53:23 +0000] [28536] [DEBUG] GET /
+[2016-04-12 09:53:25 +0000] [28535] [DEBUG] GET /
+[2016-04-12 09:53:26 +0000] [28532] [DEBUG] GET /
+[2016-04-12 09:53:27 +0000] [28535] [DEBUG] GET /
+[2016-04-12 09:53:35 +0000] [28536] [DEBUG] GET /
+[2016-04-12 09:53:37 +0000] [28536] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-12 09:54:39 +0000] [28536] [DEBUG] GET /api/v1/flurry/
+[2016-04-12 09:54:42 +0000] [28532] [DEBUG] GET /admin/
+[2016-04-12 09:56:07 +0000] [28532] [DEBUG] GET /
+[2016-04-12 09:58:55 +0000] [28532] [DEBUG] GET /
+[2016-04-12 10:00:11 +0000] [28532] [DEBUG] GET /
+[2016-04-12 10:00:16 +0000] [28535] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-12 10:00:30 +0000] [28536] [DEBUG] GET /
+[2016-04-12 10:02:31 +0000] [28536] [DEBUG] GET /
+[2016-04-12 10:02:34 +0000] [28535] [DEBUG] GET /
+[2016-04-12 10:02:37 +0000] [28532] [DEBUG] GET /
+[2016-04-12 10:02:39 +0000] [28535] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-12 10:02:45 +0000] [28536] [DEBUG] GET /
