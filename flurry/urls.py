@@ -25,3 +25,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/v1/flurry/', include(flurryapp.urls)),
 ]
+

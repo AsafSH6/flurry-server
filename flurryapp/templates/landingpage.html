@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Flurry Project</title>
-    <link rel="stylesheet" href="/static/node_modules/materialize-css/dist/css/materialize.css">
-    <link rel="stylesheet" href="/static/asaf.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Sans" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Carter+One" />
+    <link href="/static/node_modules/materialize-css/dist/css/materialize.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="/static/asaf.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Carter+One" rel="stylesheet" />
     <script src="/static/node_modules/jquery/dist/jquery.js"></script>
     <script src="/static/node_modules/materialize-css/dist/js/materialize.js"></script>
 </head>
 <body>
     <div id="main">
+        <div id="background-div"></div>
         <nav class="blue-grey lighten-3">
-            <div class="nav-wrapper">
-                <a id="flurry-logo" href="#!" class="brand-logo">FLURRY</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="/api/v1/flurry/"><i class="material-icons left">http</i>API</a></li>
-                    <li><a href="/admin/"><i class="material-icons left">supervisor_account</i>Admin Page</a></li>
-                </ul>
-            </div>
-        </nav>
+                <div class="nav-wrapper">
+                    <a id="flurry-logo" href="#!" class="brand-logo">FLURRY</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="/api/v1/flurry/"><i class="material-icons left">http</i>API</a></li>
+                        <li><a href="/admin/"><i class="material-icons left">supervisor_account</i>Admin Page</a></li>
+                    </ul>
+                </div>
+            </nav>
         <div id="about">
             <span id="about-title">Your Driver's Safety</span>
             <ul id="about-details">

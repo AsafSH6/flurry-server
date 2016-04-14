@@ -1,0 +1,82 @@
+
+/*body {*/
+    /*background-image: url("road-background-nature-wallpaper-1920x1080.jpg");*/
+/*}*/
+
+nav {
+    opacity: 0.8 !important;
+}
+
+ul {
+    display: list-item;
+}
+
+#flurry-logo {
+    margin-left: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+}
+
+#main {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+#background-div {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("static/road-background-nature-wallpaper-1920x1080.jpg");
+    background-repeat:no-repeat;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+}
+
+#about {
+    opacity: 1 !important;
+    font-size: 30px;
+    margin-left: 410px;
+    margin-top: 50px;
+    margin-right: 400px;
+}
+
+#about-title {
+    font-family: 'Josefin Sans';
+    margin-left: 230px;
+    font-size: 50px;
+}
+
+#about-details {
+    font-family: Ubuntu;
+    margin-top: 110px;
+}
+
+.detail {
+    margin-top: 25px;
+    font-weight: bolder;
+}
+
+#colman-logo {
+    float: left;
+    margin-top: 155px;
+}
+
+#colman-logo-img {
+    height: 200px;
+    width: 250px;
+}
+
+#credits {
+    float: left;
+    margin-top: 130px;
+    margin-left: 1100px;
+    color: whitesmoke;
+    font-family: 'Carter One';
+    font-size: 25px;
+}
