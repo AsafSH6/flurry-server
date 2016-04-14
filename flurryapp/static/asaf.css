@@ -1,6 +1,10 @@
 
+/*body {*/
+    /*background-image: url("road-background-nature-wallpaper-1920x1080.jpg");*/
+/*}*/
+
 nav {
-    opacity: 0.9 !important;
+    opacity: 0.8 !important;
 }
 
 ul {
@@ -14,13 +18,24 @@ ul {
 }
 
 #main {
-    float: left;
+    position: absolute;
+    z-index: 1;
     height: 100%;
     width: 100%;
+}
+
+#background-div {
     position: absolute;
-    background-image: url("/static/road-background-nature-wallpaper-1920x1080.jpg");
-    background-repeat: no-repeat;
-    opacity: 0.7;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("road-background-nature-wallpaper-1920x1080.jpg");
+    background-repeat:no-repeat;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
 }
 
 #about {
@@ -50,7 +65,6 @@ ul {
 #colman-logo {
     float: left;
     margin-top: 155px;
-    margin-left: 15px;
 }
 
 #colman-logo-img {
