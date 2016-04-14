@@ -1589,3 +1589,271 @@ Not Found: /favicon.ico
 [2016-04-12 10:02:39 +0000] [28535] [DEBUG] GET /favicon.ico
 Not Found: /favicon.ico
 [2016-04-12 10:02:45 +0000] [28536] [DEBUG] GET /
+[2016-04-12 10:07:35 +0000] [28536] [DEBUG] GET /
+[2016-04-12 10:07:35 +0000] [28535] [DEBUG] GET /static/node_modules/materialize-css/dist/css/materialize.css
+[2016-04-12 10:07:35 +0000] [28532] [DEBUG] GET /static/asaf.css
+Not Found: /static/asaf.css
+Not Found: /static/node_modules/materialize-css/dist/css/materialize.css
+[2016-04-12 10:07:35 +0000] [28536] [DEBUG] GET /static/node_modules/jquery/dist/jquery.js
+Not Found: /static/node_modules/jquery/dist/jquery.js
+[2016-04-12 10:07:35 +0000] [28532] [DEBUG] GET /static/node_modules/materialize-css/dist/js/materialize.js
+Not Found: /static/node_modules/materialize-css/dist/js/materialize.js
+[2016-04-12 10:07:37 +0000] [28535] [DEBUG] GET /
+[2016-04-12 10:07:37 +0000] [28536] [DEBUG] GET /static/node_modules/materialize-css/dist/css/materialize.css
+Not Found: /static/node_modules/materialize-css/dist/css/materialize.css
+[2016-04-12 10:07:37 +0000] [28535] [DEBUG] GET /static/node_modules/jquery/dist/jquery.js
+Not Found: /static/node_modules/jquery/dist/jquery.js
+[2016-04-12 10:07:37 +0000] [28532] [DEBUG] GET /static/node_modules/materialize-css/dist/js/materialize.js
+Not Found: /static/node_modules/materialize-css/dist/js/materialize.js
+[2016-04-12 10:07:37 +0000] [28536] [DEBUG] GET /static/asaf.css
+Not Found: /static/asaf.css
+[2016-04-12 10:07:37 +0000] [28535] [DEBUG] GET /static/logo_michlala_eng_White.png
+Not Found: /static/logo_michlala_eng_White.png
+[2016-04-12 10:07:37 +0000] [28535] [DEBUG] Ignoring EPIPE
+[2016-04-12 10:07:38 +0000] [28532] [DEBUG] GET /static/logo_michlala_eng_White.png
+Not Found: /static/logo_michlala_eng_White.png
+[2016-04-12 10:07:39 +0000] [28536] [DEBUG] GET /static/asaf.css
+Not Found: /static/asaf.css
+[2016-04-12 10:07:39 +0000] [28535] [DEBUG] GET /static/node_modules/materialize-css/dist/css/materialize.css
+Not Found: /static/node_modules/materialize-css/dist/css/materialize.css
+[2016-04-12 10:07:58 +0000] [28532] [DEBUG] GET /
+[2016-04-12 10:07:59 +0000] [28532] [DEBUG] GET /static/node_modules/materialize-css/dist/css/materialize.css
+Not Found: /static/node_modules/materialize-css/dist/css/materialize.css
+[2016-04-12 10:07:59 +0000] [28536] [DEBUG] GET /static/asaf.css
+Not Found: /static/asaf.css
+[2016-04-12 10:07:59 +0000] [28535] [DEBUG] GET /static/node_modules/jquery/dist/jquery.js
+Not Found: /static/node_modules/jquery/dist/jquery.js
+[2016-04-12 10:07:59 +0000] [28532] [DEBUG] GET /static/node_modules/materialize-css/dist/js/materialize.js
+Not Found: /static/node_modules/materialize-css/dist/js/materialize.js
+[2016-04-12 10:07:59 +0000] [28536] [DEBUG] GET /static/logo_michlala_eng_White.png
+Not Found: /static/logo_michlala_eng_White.png
+[2016-04-12 10:08:36 +0000] [28535] [DEBUG] GET /
+[2016-04-12 14:52:25 +0000] [28536] [DEBUG] GET /
+[2016-04-12 14:52:26 +0000] [28535] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-12 16:14:23 +0000] [28532] [DEBUG] GET /
+[2016-04-12 16:41:35 +0000] [28535] [DEBUG] GET /
+[2016-04-12 16:57:56 +0000] [28535] [DEBUG] GET /
+[2016-04-12 16:58:00 +0000] [28532] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-12 16:58:08 +0000] [28532] [DEBUG] GET /
+[2016-04-12 16:58:31 +0000] [28536] [DEBUG] GET /api/v1/flurry/
+[2016-04-12 16:58:36 +0000] [28535] [DEBUG] GET /admin/
+[2016-04-12 16:58:36 +0000] [28536] [DEBUG] GET /admin/login/
+[2016-04-12 18:09:54 +0000] [28536] [DEBUG] GET /
+[2016-04-12 18:09:56 +0000] [28535] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-12 18:12:06 +0000] [28535] [DEBUG] GET /
+[2016-04-12 20:33:28 +0000] [28532] [DEBUG] GET /xmlrpc.php
+Not Found: /xmlrpc.php
+[2016-04-12 23:27:49 +0000] [28532] [DEBUG] GET /xmlrpc.php
+Not Found: /xmlrpc.php
+[2016-04-13 03:11:35 +0000] [28532] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-13 04:45:28 +0000] [28532] [DEBUG] GET /
+[2016-04-13 05:39:46 +0000] [28536] [DEBUG] GET /
+[2016-04-13 05:39:50 +0000] [28532] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-13 05:49:27 +0000] [28532] [DEBUG] GET /api/v1/flurry/
+[2016-04-13 05:58:21 +0000] [28536] [DEBUG] GET /
+[2016-04-13 06:45:35 +0000] [28532] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-13 08:32:39 +0000] [28535] [DEBUG] GET /
+[2016-04-13 08:33:09 +0000] [28536] [DEBUG] GET /api/v1/flurry/
+[2016-04-13 08:33:19 +0000] [28535] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-13 08:33:23 +0000] [28532] [DEBUG] GET /api/v1/flurry/
+[2016-04-13 08:33:24 +0000] [28535] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-13 08:33:28 +0000] [28536] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-13 08:33:34 +0000] [28535] [DEBUG] GET /admin/
+[2016-04-13 08:33:34 +0000] [28532] [DEBUG] GET /admin/login/
+[2016-04-13 12:50:30 +0000] [28535] [DEBUG] GET /
+[2016-04-14 02:07:44 +0000] [28532] [DEBUG] GET /
+[2016-04-14 05:36:31 +0000] [28536] [DEBUG] GET /
+[2016-04-14 08:38:23 +0000] [28536] [DEBUG] GET /manager/html
+Not Found: /manager/html
+[2016-04-14 11:46:44 +0000] [28535] [DEBUG] GET /
+[2016-04-14 11:46:46 +0000] [28536] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-14 11:50:20 +0000] [28526] [INFO] Handling signal: term
+[2016-04-14 11:50:20 +0000] [28536] [INFO] Worker exiting (pid: 28536)
+[2016-04-14 11:50:20 +0000] [28532] [INFO] Worker exiting (pid: 28532)
+[2016-04-14 11:50:20 +0000] [28535] [INFO] Worker exiting (pid: 28535)
+[2016-04-14 11:50:20 +0000] [28526] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-14 11:50:21 +0000] [6437] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f7bb17da410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f7bb17da140>
+  pre_fork: <function pre_fork at 0x7f7bb17da2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f7bb184ff50>
+  pre_exec: <function pre_exec at 0x7f7bb17da9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f7bb17da578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f7bb17df0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f7bb17dab18>
+  post_request: <function post_request at 0x7f7bb17dac08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f7bb17da6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f7bb17dad70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f7bb184fde8>
+  worker_abort: <function worker_abort at 0x7f7bb17da848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f7bb17daed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-14 11:50:21 +0000] [6437] [INFO] Starting gunicorn 19.4.5
+[2016-04-14 11:50:21 +0000] [6437] [DEBUG] Arbiter booted
+[2016-04-14 11:50:21 +0000] [6437] [INFO] Listening at: http://0.0.0.0:8001 (6437)
+[2016-04-14 11:50:21 +0000] [6437] [INFO] Using worker: sync
+[2016-04-14 11:50:21 +0000] [6443] [INFO] Booting worker with pid: 6443
+[2016-04-14 11:50:21 +0000] [6444] [INFO] Booting worker with pid: 6444
+[2016-04-14 11:50:21 +0000] [6449] [INFO] Booting worker with pid: 6449
+[2016-04-14 11:50:21 +0000] [6437] [DEBUG] 3 workers
+[2016-04-14 11:50:24 +0000] [6444] [DEBUG] GET /
+[2016-04-14 11:51:42 +0000] [6437] [INFO] Handling signal: term
+[2016-04-14 11:51:42 +0000] [6449] [INFO] Worker exiting (pid: 6449)
+[2016-04-14 11:51:42 +0000] [6443] [INFO] Worker exiting (pid: 6443)
+[2016-04-14 11:51:42 +0000] [6444] [INFO] Worker exiting (pid: 6444)
+[2016-04-14 11:51:42 +0000] [6437] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-14 11:51:43 +0000] [6597] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f69a2372410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f69a2372140>
+  pre_fork: <function pre_fork at 0x7f69a23722a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f69a23e7f50>
+  pre_exec: <function pre_exec at 0x7f69a23729b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f69a2372578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f69a23770c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f69a2372b18>
+  post_request: <function post_request at 0x7f69a2372c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f69a23726e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f69a2372d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f69a23e7de8>
+  worker_abort: <function worker_abort at 0x7f69a2372848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f69a2372ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-14 11:51:43 +0000] [6597] [INFO] Starting gunicorn 19.4.5
+[2016-04-14 11:51:43 +0000] [6597] [DEBUG] Arbiter booted
+[2016-04-14 11:51:43 +0000] [6597] [INFO] Listening at: http://0.0.0.0:8001 (6597)
+[2016-04-14 11:51:43 +0000] [6597] [INFO] Using worker: sync
+[2016-04-14 11:51:43 +0000] [6603] [INFO] Booting worker with pid: 6603
+[2016-04-14 11:51:43 +0000] [6604] [INFO] Booting worker with pid: 6604
+[2016-04-14 11:51:43 +0000] [6607] [INFO] Booting worker with pid: 6607
+[2016-04-14 11:51:43 +0000] [6597] [DEBUG] 3 workers
+[2016-04-14 11:51:45 +0000] [6604] [DEBUG] GET /
+[2016-04-14 11:52:00 +0000] [6607] [DEBUG] GET /api/v1/flurry/
+[2016-04-14 11:52:08 +0000] [6604] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-14 11:52:14 +0000] [6607] [DEBUG] GET /api/v1/flurry/data-drivers/1/
+[2016-04-14 11:52:18 +0000] [6603] [DEBUG] GET /api/v1/flurry/data-drivers/2/
+[2016-04-14 11:52:22 +0000] [6607] [DEBUG] GET /admin/
