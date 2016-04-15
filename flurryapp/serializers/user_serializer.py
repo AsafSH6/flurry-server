@@ -4,7 +4,8 @@ from flurryapp.models import Driver
 
 
 class UserSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(write_only=True)
 
     class Meta:
         model = User
-        fields = ('id', 'username')
+        fields = ('id', 'username', 'name')
