@@ -4,8 +4,8 @@ from flurryapp.models import Driver
 
 
 class UserSerializer(serializers.ModelSerializer):
-    snippets = serializers.PrimaryKeyRelatedField(queryset=Driver.objects.all())
+    driver = serializers.PrimaryKeyRelatedField(many=False, queryset=Driver.objects.all())
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'drivers')
+        fields = ('id', 'username', 'driver')
