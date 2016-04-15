@@ -5,3 +5,5 @@ drf-extensions==0.2.8
 obd==0.4.1
 psycopg2==2.6.1
 pyserial==3.0.1
+numpy==1.9.2
+scikit-learn==0.17.1

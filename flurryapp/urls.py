@@ -11,6 +11,8 @@ router.register(r'cars', viewsets.CarViewSet, base_name='cars')
 
 router.register(r'profiles', viewsets.ProfileViewSet, base_name='profiles')
 
+router.register(r'users', viewsets.UserViewSet, base_name='users')
+
 drivers_routers = router.register(r'drivers', viewsets.DriverViewSet, base_name='drivers')
 
 drivers_routers.register(r'cars', viewsets.CarViewSet, base_name='driver-cars', parents_query_lookups=['owner'])
