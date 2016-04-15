@@ -2260,3 +2260,636 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 1018, in get_field_names
     serializer_class=self.__class__.__name__
 AssertionError: The field 'snippets' was declared on serializer UserSerializer, but has not been included in the 'fields' option.
+[2016-04-15 10:30:01 +0000] [11818] [INFO] Handling signal: term
+[2016-04-15 10:30:01 +0000] [11824] [INFO] Worker exiting (pid: 11824)
+[2016-04-15 10:30:01 +0000] [11827] [INFO] Worker exiting (pid: 11827)
+[2016-04-15 10:30:01 +0000] [11830] [INFO] Worker exiting (pid: 11830)
+[2016-04-15 10:30:01 +0000] [11818] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 10:30:02 +0000] [11898] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f3bb9363410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f3bb9363140>
+  pre_fork: <function pre_fork at 0x7f3bb93632a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f3bb93d8f50>
+  pre_exec: <function pre_exec at 0x7f3bb93639b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f3bb9363578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f3bb93680c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f3bb9363b18>
+  post_request: <function post_request at 0x7f3bb9363c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f3bb93636e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f3bb9363d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f3bb93d8de8>
+  worker_abort: <function worker_abort at 0x7f3bb9363848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f3bb9363ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 10:30:02 +0000] [11898] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 10:30:02 +0000] [11898] [DEBUG] Arbiter booted
+[2016-04-15 10:30:02 +0000] [11898] [INFO] Listening at: http://0.0.0.0:8001 (11898)
+[2016-04-15 10:30:02 +0000] [11898] [INFO] Using worker: sync
+[2016-04-15 10:30:02 +0000] [11904] [INFO] Booting worker with pid: 11904
+[2016-04-15 10:30:02 +0000] [11907] [INFO] Booting worker with pid: 11907
+[2016-04-15 10:30:02 +0000] [11910] [INFO] Booting worker with pid: 11910
+[2016-04-15 10:30:02 +0000] [11898] [DEBUG] 3 workers
+[2016-04-15 10:30:05 +0000] [11907] [DEBUG] GET /api/v1/flurry/users/
+Internal Server Error: /api/v1/flurry/users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 146, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 80, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'User' object has no attribute 'driver'
+[2016-04-15 10:35:00 +0000] [11898] [INFO] Handling signal: term
+[2016-04-15 10:35:00 +0000] [11904] [INFO] Worker exiting (pid: 11904)
+[2016-04-15 10:35:00 +0000] [11907] [INFO] Worker exiting (pid: 11907)
+[2016-04-15 10:35:00 +0000] [11910] [INFO] Worker exiting (pid: 11910)
+[2016-04-15 10:35:00 +0000] [11898] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 10:35:01 +0000] [11972] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f2da50e8410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f2da50e8140>
+  pre_fork: <function pre_fork at 0x7f2da50e82a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f2da515df50>
+  pre_exec: <function pre_exec at 0x7f2da50e89b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f2da50e8578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f2da50ed0c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f2da50e8b18>
+  post_request: <function post_request at 0x7f2da50e8c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f2da50e86e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f2da50e8d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f2da515dde8>
+  worker_abort: <function worker_abort at 0x7f2da50e8848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f2da50e8ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 10:35:01 +0000] [11972] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 10:35:01 +0000] [11972] [DEBUG] Arbiter booted
+[2016-04-15 10:35:01 +0000] [11972] [INFO] Listening at: http://0.0.0.0:8001 (11972)
+[2016-04-15 10:35:01 +0000] [11972] [INFO] Using worker: sync
+[2016-04-15 10:35:01 +0000] [11978] [INFO] Booting worker with pid: 11978
+[2016-04-15 10:35:01 +0000] [11981] [INFO] Booting worker with pid: 11981
+[2016-04-15 10:35:01 +0000] [11982] [INFO] Booting worker with pid: 11982
+[2016-04-15 10:35:01 +0000] [11972] [DEBUG] 3 workers
+[2016-04-15 10:35:04 +0000] [11981] [DEBUG] GET /api/v1/flurry/users/
+Internal Server Error: /api/v1/flurry/users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/ubuntu/flurry/flurry/urls.py", line 18, in <module>
+    import flurryapp.urls
+  File "/home/ubuntu/flurry/flurryapp/urls.py", line 2, in <module>
+    from flurryapp import viewsets
+  File "/home/ubuntu/flurry/flurryapp/viewsets/__init__.py", line 5, in <module>
+    from user_viewset import UserViewSet
+  File "/home/ubuntu/flurry/flurryapp/viewsets/user_viewset.py", line 4, in <module>
+    from flurryapp.serializers.user_serializer import UserSerializer
+  File "/home/ubuntu/flurry/flurryapp/serializers/user_serializer.py", line 4, in <module>
+    from flurryapp.models import DriverSerializer
+ImportError: cannot import name DriverSerializer
+[2016-04-15 10:35:20 +0000] [11972] [INFO] Handling signal: term
+[2016-04-15 10:35:20 +0000] [11978] [INFO] Worker exiting (pid: 11978)
+[2016-04-15 10:35:20 +0000] [11982] [INFO] Worker exiting (pid: 11982)
+[2016-04-15 10:35:20 +0000] [11981] [INFO] Worker exiting (pid: 11981)
+[2016-04-15 10:35:20 +0000] [11972] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 10:35:21 +0000] [11996] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f67126b2410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f67126b2140>
+  pre_fork: <function pre_fork at 0x7f67126b22a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f6712727f50>
+  pre_exec: <function pre_exec at 0x7f67126b29b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f67126b2578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f67126b70c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f67126b2b18>
+  post_request: <function post_request at 0x7f67126b2c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f67126b26e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f67126b2d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f6712727de8>
+  worker_abort: <function worker_abort at 0x7f67126b2848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f67126b2ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 10:35:21 +0000] [11996] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 10:35:21 +0000] [11996] [DEBUG] Arbiter booted
+[2016-04-15 10:35:21 +0000] [11996] [INFO] Listening at: http://0.0.0.0:8001 (11996)
+[2016-04-15 10:35:21 +0000] [11996] [INFO] Using worker: sync
+[2016-04-15 10:35:21 +0000] [12002] [INFO] Booting worker with pid: 12002
+[2016-04-15 10:35:21 +0000] [12003] [INFO] Booting worker with pid: 12003
+[2016-04-15 10:35:21 +0000] [12008] [INFO] Booting worker with pid: 12008
+[2016-04-15 10:35:21 +0000] [11996] [DEBUG] 3 workers
+[2016-04-15 10:35:23 +0000] [12003] [DEBUG] GET /api/v1/flurry/users/
+Internal Server Error: /api/v1/flurry/users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 472, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 220, in to_representation
+    return value.pk
+AttributeError: 'RelatedManager' object has no attribute 'pk'
+[2016-04-15 10:40:42 +0000] [11996] [INFO] Handling signal: term
+[2016-04-15 10:40:42 +0000] [12008] [INFO] Worker exiting (pid: 12008)
+[2016-04-15 10:40:42 +0000] [12002] [INFO] Worker exiting (pid: 12002)
+[2016-04-15 10:40:42 +0000] [12003] [INFO] Worker exiting (pid: 12003)
+[2016-04-15 10:40:42 +0000] [11996] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 10:40:43 +0000] [12028] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f11915e1410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f11915e1140>
+  pre_fork: <function pre_fork at 0x7f11915e12a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f1191656f50>
+  pre_exec: <function pre_exec at 0x7f11915e19b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f11915e1578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f11915e60c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f11915e1b18>
+  post_request: <function post_request at 0x7f11915e1c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f11915e16e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f11915e1d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f1191656de8>
+  worker_abort: <function worker_abort at 0x7f11915e1848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f11915e1ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 10:40:43 +0000] [12028] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 10:40:43 +0000] [12028] [DEBUG] Arbiter booted
+[2016-04-15 10:40:43 +0000] [12028] [INFO] Listening at: http://0.0.0.0:8001 (12028)
+[2016-04-15 10:40:43 +0000] [12028] [INFO] Using worker: sync
+[2016-04-15 10:40:43 +0000] [12034] [INFO] Booting worker with pid: 12034
+[2016-04-15 10:40:44 +0000] [12037] [INFO] Booting worker with pid: 12037
+[2016-04-15 10:40:44 +0000] [12038] [INFO] Booting worker with pid: 12038
+[2016-04-15 10:40:44 +0000] [12028] [DEBUG] 3 workers
+[2016-04-15 10:40:48 +0000] [12037] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-15 10:41:23 +0000] [12038] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 10:41:26 +0000] [12037] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-15 10:41:34 +0000] [12038] [DEBUG] POST /api/v1/flurry/drivers/
+[2016-04-15 10:41:40 +0000] [12034] [DEBUG] POST /api/v1/flurry/drivers/
+[2016-04-15 10:41:46 +0000] [12038] [DEBUG] POST /api/v1/flurry/drivers/
+[2016-04-15 10:41:47 +0000] [12037] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 10:41:50 +0000] [12038] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-15 10:42:01 +0000] [12037] [DEBUG] POST /api/v1/flurry/users/
+[2016-04-15 10:42:27 +0000] [12038] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 10:42:28 +0000] [12034] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-15 10:47:07 +0000] [12037] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 10:47:10 +0000] [12034] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-15 10:47:58 +0000] [12037] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 10:48:00 +0000] [12038] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-15 10:50:43 +0000] [12028] [INFO] Handling signal: term
+[2016-04-15 10:50:43 +0000] [12034] [INFO] Worker exiting (pid: 12034)
+[2016-04-15 10:50:43 +0000] [12037] [INFO] Worker exiting (pid: 12037)
+[2016-04-15 10:50:43 +0000] [12038] [INFO] Worker exiting (pid: 12038)
+[2016-04-15 10:50:43 +0000] [12028] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 10:50:44 +0000] [12137] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f1c62f0c410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f1c62f0c140>
+  pre_fork: <function pre_fork at 0x7f1c62f0c2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f1c62f81f50>
+  pre_exec: <function pre_exec at 0x7f1c62f0c9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f1c62f0c578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f1c62f110c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f1c62f0cb18>
+  post_request: <function post_request at 0x7f1c62f0cc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f1c62f0c6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f1c62f0cd70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f1c62f81de8>
+  worker_abort: <function worker_abort at 0x7f1c62f0c848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f1c62f0ced8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 10:50:44 +0000] [12137] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 10:50:44 +0000] [12137] [DEBUG] Arbiter booted
+[2016-04-15 10:50:44 +0000] [12137] [INFO] Listening at: http://0.0.0.0:8001 (12137)
+[2016-04-15 10:50:44 +0000] [12137] [INFO] Using worker: sync
+[2016-04-15 10:50:44 +0000] [12143] [INFO] Booting worker with pid: 12143
+[2016-04-15 10:50:44 +0000] [12144] [INFO] Booting worker with pid: 12144
+[2016-04-15 10:50:44 +0000] [12149] [INFO] Booting worker with pid: 12149
+[2016-04-15 10:50:44 +0000] [12137] [DEBUG] 3 workers
+[2016-04-15 10:50:48 +0000] [12144] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-15 10:51:50 +0000] [12137] [INFO] Handling signal: term
+[2016-04-15 10:51:50 +0000] [12144] [INFO] Worker exiting (pid: 12144)
+[2016-04-15 10:51:50 +0000] [12149] [INFO] Worker exiting (pid: 12149)
+[2016-04-15 10:51:50 +0000] [12143] [INFO] Worker exiting (pid: 12143)
+[2016-04-15 10:51:50 +0000] [12137] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 10:51:51 +0000] [12160] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f53243ab410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f53243ab140>
+  pre_fork: <function pre_fork at 0x7f53243ab2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f5324420f50>
+  pre_exec: <function pre_exec at 0x7f53243ab9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f53243ab578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f53243b00c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f53243abb18>
+  post_request: <function post_request at 0x7f53243abc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f53243ab6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f53243abd70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f5324420de8>
+  worker_abort: <function worker_abort at 0x7f53243ab848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f53243abed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 10:51:51 +0000] [12160] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 10:51:51 +0000] [12160] [DEBUG] Arbiter booted
+[2016-04-15 10:51:51 +0000] [12160] [INFO] Listening at: http://0.0.0.0:8001 (12160)
+[2016-04-15 10:51:51 +0000] [12160] [INFO] Using worker: sync
+[2016-04-15 10:51:51 +0000] [12166] [INFO] Booting worker with pid: 12166
+[2016-04-15 10:51:51 +0000] [12167] [INFO] Booting worker with pid: 12167
+[2016-04-15 10:51:51 +0000] [12170] [INFO] Booting worker with pid: 12170
+[2016-04-15 10:51:51 +0000] [12160] [DEBUG] 3 workers
+[2016-04-15 10:51:53 +0000] [12167] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-15 10:52:29 +0000] [12170] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 10:52:38 +0000] [12167] [DEBUG] GET /api/v1/flurry/drivers/
