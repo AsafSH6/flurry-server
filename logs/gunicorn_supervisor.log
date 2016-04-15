@@ -1857,3 +1857,406 @@ Starting flurry as ubuntu
 [2016-04-14 11:52:14 +0000] [6607] [DEBUG] GET /api/v1/flurry/data-drivers/1/
 [2016-04-14 11:52:18 +0000] [6603] [DEBUG] GET /api/v1/flurry/data-drivers/2/
 [2016-04-14 11:52:22 +0000] [6607] [DEBUG] GET /admin/
+[2016-04-14 11:53:46 +0000] [6604] [DEBUG] GET /
+[2016-04-14 11:53:54 +0000] [6603] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-14 11:54:11 +0000] [6607] [DEBUG] GET /
+[2016-04-14 11:54:15 +0000] [6604] [DEBUG] GET /
+[2016-04-14 11:55:36 +0000] [6604] [DEBUG] GET /
+[2016-04-14 12:00:03 +0000] [6607] [DEBUG] GET /muieblackcat
+Not Found: /muieblackcat
+[2016-04-14 12:00:03 +0000] [6603] [DEBUG] GET /admin/scripts/setup.php
+Not Found: /admin/scripts/setup.php
+[2016-04-14 12:00:03 +0000] [6604] [DEBUG] GET /dbadmin/scripts/setup.php
+Not Found: /dbadmin/scripts/setup.php
+[2016-04-14 12:00:05 +0000] [6607] [DEBUG] GET /myadmin/scripts/setup.php
+Not Found: /myadmin/scripts/setup.php
+[2016-04-14 12:00:05 +0000] [6603] [DEBUG] GET /MyAdmin/scripts/setup.php
+Not Found: /MyAdmin/scripts/setup.php
+[2016-04-14 12:00:05 +0000] [6604] [DEBUG] GET /mysqladmin/scripts/setup.php
+Not Found: /mysqladmin/scripts/setup.php
+[2016-04-14 12:00:05 +0000] [6607] [DEBUG] GET /mysql/scripts/setup.php
+Not Found: /mysql/scripts/setup.php
+[2016-04-14 12:00:06 +0000] [6603] [DEBUG] GET /phpma/scripts/setup.php
+Not Found: /phpma/scripts/setup.php
+[2016-04-14 12:00:06 +0000] [6604] [DEBUG] GET /phpmyadmin/scripts/setup.php
+Not Found: /phpmyadmin/scripts/setup.php
+[2016-04-14 12:00:06 +0000] [6607] [DEBUG] GET /phpMyAdmin/scripts/setup.php
+Not Found: /phpMyAdmin/scripts/setup.php
+[2016-04-14 12:00:07 +0000] [6603] [DEBUG] GET /phpMyAdmin/scripts/setup.php
+Not Found: /phpMyAdmin/scripts/setup.php
+[2016-04-14 12:00:07 +0000] [6604] [DEBUG] GET /pma/scripts/setup.php
+Not Found: /pma/scripts/setup.php
+[2016-04-14 12:00:07 +0000] [6607] [DEBUG] GET /sqlweb/scripts/setup.php
+Not Found: /sqlweb/scripts/setup.php
+[2016-04-14 12:00:07 +0000] [6603] [DEBUG] GET /webdb/scripts/setup.php
+Not Found: /webdb/scripts/setup.php
+[2016-04-14 12:00:08 +0000] [6604] [DEBUG] GET /websql/scripts/setup.php
+Not Found: /websql/scripts/setup.php
+[2016-04-14 12:39:44 +0000] [6604] [DEBUG] GET /search/complete
+Not Found: /search/complete
+[2016-04-14 13:29:16 +0000] [6603] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-14 14:01:03 +0000] [6607] [DEBUG] GET /manager/html
+Not Found: /manager/html
+[2016-04-14 14:05:13 +0000] [6604] [DEBUG] GET /
+[2016-04-14 14:05:14 +0000] [6607] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-14 14:05:48 +0000] [6607] [DEBUG] GET /api/v1/flurry/
+[2016-04-14 14:05:58 +0000] [6603] [DEBUG] GET /api/v1/flurry/profiles/
+[2016-04-14 14:06:03 +0000] [6607] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-14 14:06:14 +0000] [6603] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-14 14:06:22 +0000] [6607] [DEBUG] GET /api/v1/flurry/profiles/
+[2016-04-14 14:06:29 +0000] [6604] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-14 14:21:04 +0000] [6604] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-14 14:55:47 +0000] [6607] [DEBUG] GET /
+[2016-04-14 16:47:04 +0000] [6604] [DEBUG] GET /cgi-bin/test-cgi
+Not Found: /cgi-bin/test-cgi
+[2016-04-14 16:47:04 +0000] [6604] [DEBUG] Ignoring EPIPE
+[2016-04-14 17:20:26 +0000] [6603] [DEBUG] GET /
+[2016-04-14 17:20:27 +0000] [6607] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-14 18:06:47 +0000] [6607] [DEBUG] GET /
+[2016-04-14 18:06:47 +0000] [6607] [DEBUG] Ignoring EPIPE
+[2016-04-14 18:14:53 +0000] [6607] [DEBUG] GET /robots.txt
+Not Found: /robots.txt
+[2016-04-14 19:12:24 +0000] [6603] [DEBUG] GET /cgi-sys/defaultwebpage.cgi
+Not Found: /cgi-sys/defaultwebpage.cgi
+[2016-04-14 19:12:24 +0000] [6603] [DEBUG] Ignoring EPIPE
+[2016-04-14 21:47:15 +0000] [6604] [DEBUG] GET /test.cgi
+Not Found: /test.cgi
+[2016-04-14 21:47:15 +0000] [6604] [DEBUG] Ignoring EPIPE
+[2016-04-15 05:55:38 +0000] [6607] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-15 06:04:29 +0000] [6603] [DEBUG] GET /cgi-bin/index.cgi
+Not Found: /cgi-bin/index.cgi
+[2016-04-15 06:04:29 +0000] [6603] [DEBUG] Ignoring EPIPE
+[2016-04-15 07:51:22 +0000] [6603] [DEBUG] GET /
+[2016-04-15 07:51:25 +0000] [6604] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-15 07:52:53 +0000] [6607] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 07:53:00 +0000] [6603] [DEBUG] GET /admin/
+[2016-04-15 08:07:26 +0000] [6597] [INFO] Handling signal: term
+[2016-04-15 08:07:26 +0000] [6603] [INFO] Worker exiting (pid: 6603)
+[2016-04-15 08:07:26 +0000] [6604] [INFO] Worker exiting (pid: 6604)
+[2016-04-15 08:07:26 +0000] [6607] [INFO] Worker exiting (pid: 6607)
+[2016-04-15 08:07:26 +0000] [6597] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 08:07:27 +0000] [10818] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f3db4aac410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f3db4aac140>
+  pre_fork: <function pre_fork at 0x7f3db4aac2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f3db4b21f50>
+  pre_exec: <function pre_exec at 0x7f3db4aac9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f3db4aac578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f3db4ab10c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f3db4aacb18>
+  post_request: <function post_request at 0x7f3db4aacc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f3db4aac6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f3db4aacd70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f3db4b21de8>
+  worker_abort: <function worker_abort at 0x7f3db4aac848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f3db4aaced8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 08:07:27 +0000] [10818] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 08:07:27 +0000] [10818] [DEBUG] Arbiter booted
+[2016-04-15 08:07:27 +0000] [10818] [INFO] Listening at: http://0.0.0.0:8001 (10818)
+[2016-04-15 08:07:27 +0000] [10818] [INFO] Using worker: sync
+[2016-04-15 08:07:27 +0000] [10824] [INFO] Booting worker with pid: 10824
+[2016-04-15 08:07:27 +0000] [10827] [INFO] Booting worker with pid: 10827
+[2016-04-15 08:07:27 +0000] [10828] [INFO] Booting worker with pid: 10828
+[2016-04-15 08:07:27 +0000] [10818] [DEBUG] 3 workers
+[2016-04-15 08:07:30 +0000] [10827] [DEBUG] GET /
+[2016-04-15 08:07:32 +0000] [10828] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 08:07:36 +0000] [10827] [DEBUG] GET /admin/
+[2016-04-15 09:05:36 +0000] [10818] [INFO] Handling signal: term
+[2016-04-15 09:05:36 +0000] [10824] [INFO] Worker exiting (pid: 10824)
+[2016-04-15 09:05:36 +0000] [10827] [INFO] Worker exiting (pid: 10827)
+[2016-04-15 09:05:36 +0000] [10828] [INFO] Worker exiting (pid: 10828)
+[2016-04-15 09:05:36 +0000] [10818] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 09:05:37 +0000] [11267] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f24d25ff410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f24d25ff140>
+  pre_fork: <function pre_fork at 0x7f24d25ff2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f24d2674f50>
+  pre_exec: <function pre_exec at 0x7f24d25ff9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f24d25ff578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f24d26040c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f24d25ffb18>
+  post_request: <function post_request at 0x7f24d25ffc08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f24d25ff6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f24d25ffd70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f24d2674de8>
+  worker_abort: <function worker_abort at 0x7f24d25ff848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f24d25ffed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 09:05:37 +0000] [11267] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 09:05:37 +0000] [11267] [DEBUG] Arbiter booted
+[2016-04-15 09:05:37 +0000] [11267] [INFO] Listening at: http://0.0.0.0:8001 (11267)
+[2016-04-15 09:05:37 +0000] [11267] [INFO] Using worker: sync
+[2016-04-15 09:05:37 +0000] [11273] [INFO] Booting worker with pid: 11273
+[2016-04-15 09:05:37 +0000] [11276] [INFO] Booting worker with pid: 11276
+[2016-04-15 09:05:38 +0000] [11277] [INFO] Booting worker with pid: 11277
+[2016-04-15 09:05:38 +0000] [11267] [DEBUG] 3 workers
+[2016-04-15 09:13:47 +0000] [11277] [DEBUG] GET /
+[2016-04-15 09:13:49 +0000] [11276] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-15 09:13:58 +0000] [11277] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 09:14:02 +0000] [11276] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-15 09:15:21 +0000] [11277] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 09:15:23 +0000] [11276] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-15 09:15:41 +0000] [11273] [DEBUG] GET /api/v1/flurry/drivers/2/
+[2016-04-15 09:21:23 +0000] [11273] [DEBUG] POST /api/v1/flurry/drivers/2/insert_driving_data/
+[2016-04-15 09:21:40 +0000] [11277] [DEBUG] GET /api/v1/flurry/drivers/2/
+[2016-04-15 09:21:41 +0000] [11276] [DEBUG] GET /api/v1/flurry/drivers/2/
+[2016-04-15 09:21:43 +0000] [11273] [DEBUG] GET /api/v1/flurry/data-drivers/2/
+[2016-04-15 09:22:19 +0000] [11277] [DEBUG] PUT /api/v1/flurry/data-drivers/2/
+[2016-04-15 09:24:16 +0000] [11273] [DEBUG] GET /api/v1/flurry/data-drivers/2/
+[2016-04-15 09:37:49 +0000] [11273] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 09:48:21 +0000] [11276] [DEBUG] GET /status.cgi
+Not Found: /status.cgi
+[2016-04-15 09:48:21 +0000] [11276] [DEBUG] Ignoring EPIPE
+[2016-04-15 10:27:31 +0000] [11267] [INFO] Handling signal: term
+[2016-04-15 10:27:31 +0000] [11273] [INFO] Worker exiting (pid: 11273)
+<QueryDict: {u'test': [u'test']}>
+[2016-04-15 10:27:31 +0000] [11276] [INFO] Worker exiting (pid: 11276)
+[2016-04-15 10:27:31 +0000] [11277] [INFO] Worker exiting (pid: 11277)
+[2016-04-15 10:27:31 +0000] [11267] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-15 10:27:32 +0000] [11818] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f453b504410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f453b504140>
+  pre_fork: <function pre_fork at 0x7f453b5042a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f453b579f50>
+  pre_exec: <function pre_exec at 0x7f453b5049b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7f453b504578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7f453b5090c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f453b504b18>
+  post_request: <function post_request at 0x7f453b504c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f453b5046e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7f453b504d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7f453b579de8>
+  worker_abort: <function worker_abort at 0x7f453b504848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f453b504ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-15 10:27:32 +0000] [11818] [INFO] Starting gunicorn 19.4.5
+[2016-04-15 10:27:32 +0000] [11818] [DEBUG] Arbiter booted
+[2016-04-15 10:27:32 +0000] [11818] [INFO] Listening at: http://0.0.0.0:8001 (11818)
+[2016-04-15 10:27:32 +0000] [11818] [INFO] Using worker: sync
+[2016-04-15 10:27:32 +0000] [11824] [INFO] Booting worker with pid: 11824
+[2016-04-15 10:27:32 +0000] [11827] [INFO] Booting worker with pid: 11827
+[2016-04-15 10:27:33 +0000] [11830] [INFO] Booting worker with pid: 11830
+[2016-04-15 10:27:33 +0000] [11818] [DEBUG] 3 workers
+[2016-04-15 10:27:37 +0000] [11827] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 10:27:40 +0000] [11830] [DEBUG] GET /api/v1/flurry/users/
+Internal Server Error: /api/v1/flurry/users/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 674, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 614, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 459, in to_representation
+    fields = self._readable_fields
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 353, in _readable_fields
+    field for field in self.fields.values()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 919, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 1018, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'snippets' was declared on serializer UserSerializer, but has not been included in the 'fields' option.

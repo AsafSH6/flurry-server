@@ -14,7 +14,7 @@ class DataDriver(models.Model):
 
 
 class Driver(models.Model):
-    user = models.ForeignKey(User, related_name='drivers')
+    user = models.ForeignKey(User, null=True, related_name='drivers')
     name = models.CharField(max_length=255)
     creation_date = models.DateField(auto_now_add=True)
     driving_data = models.ForeignKey(DataDriver, related_name='driver')
