@@ -9,3 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'name')
+
+    def create(self, validated_data):
+        validated_data.pop('name')  # name is not a property of user model
+        return super(UserSerializer, self).create(validated_data)
