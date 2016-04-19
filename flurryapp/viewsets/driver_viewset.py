@@ -21,7 +21,7 @@ class DriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
     def insert_driving_data(self, request, *args, **kwargs):
         driver = self.get_object()
         driving_data_json = request.data
-        if isinstance(driving_data_json, dict):
+        if isinstance(driving_data_json, (dict, list)):
             print driving_data_json
             driver.driving_data.data.append(driving_data_json)
             driver.driving_data.save()

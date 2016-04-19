@@ -2893,3 +2893,249 @@ Starting flurry as ubuntu
 [2016-04-15 10:51:53 +0000] [12167] [DEBUG] GET /api/v1/flurry/drivers/
 [2016-04-15 10:52:29 +0000] [12170] [DEBUG] GET /api/v1/flurry/
 [2016-04-15 10:52:38 +0000] [12167] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-15 15:35:57 +0000] [12166] [DEBUG] GET /
+[2016-04-15 15:35:57 +0000] [12167] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-15 19:42:54 +0000] [12170] [DEBUG] GET /
+[2016-04-15 19:42:55 +0000] [12167] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-15 19:42:56 +0000] [12166] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 19:42:59 +0000] [12167] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-15 19:43:06 +0000] [12166] [DEBUG] GET /api/v1/flurry/
+[2016-04-15 19:43:07 +0000] [12167] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-15 19:43:12 +0000] [12166] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-15 19:43:55 +0000] [12167] [DEBUG] GET /api/v1/flurry/data-drivers/4/
+[2016-04-15 19:44:00 +0000] [12170] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-15 19:44:11 +0000] [12166] [DEBUG] GET /api/v1/flurry/data-drivers/2/
+[2016-04-15 19:44:17 +0000] [12167] [DEBUG] PUT /api/v1/flurry/data-drivers/2/
+[2016-04-15 19:44:22 +0000] [12170] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-15 23:26:14 +0000] [12166] [DEBUG] GET /
+[2016-04-16 00:07:57 +0000] [12170] [DEBUG] GET /xmlrpc.php
+Not Found: /xmlrpc.php
+[2016-04-16 02:49:18 +0000] [12167] [DEBUG] GET /
+[2016-04-16 05:08:57 +0000] [12166] [DEBUG] GET /manager/html
+Not Found: /manager/html
+[2016-04-16 11:48:10 +0000] [12167] [DEBUG] GET /
+[2016-04-16 12:51:29 +0000] [12166] [DEBUG] GET /cache/global/img/gs.gif
+Not Found: /cache/global/img/gs.gif
+[2016-04-16 19:55:53 +0000] [12166] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-17 03:38:53 +0000] [12167] [DEBUG] GET /muieblackcat
+Not Found: /muieblackcat
+[2016-04-17 03:38:53 +0000] [12170] [DEBUG] GET /phpMyAdmin/scripts/setup.php
+Not Found: /phpMyAdmin/scripts/setup.php
+[2016-04-17 03:38:54 +0000] [12166] [DEBUG] GET /phpmyadmin/scripts/setup.php
+Not Found: /phpmyadmin/scripts/setup.php
+[2016-04-17 03:38:55 +0000] [12167] [DEBUG] GET /pma/scripts/setup.php
+Not Found: /pma/scripts/setup.php
+[2016-04-17 04:05:51 +0000] [12167] [DEBUG] GET /
+[2016-04-17 05:11:34 +0000] [12166] [DEBUG] GET /manager/html
+Not Found: /manager/html
+[2016-04-17 06:53:14 +0000] [12166] [DEBUG] GET /
+[2016-04-17 07:08:04 +0000] [12167] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-17 09:33:25 +0000] [12166] [DEBUG] GET /CFIDE/administrator/
+Not Found: /CFIDE/administrator/
+[2016-04-17 13:04:41 +0000] [12166] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-17 15:17:16 +0000] [12170] [DEBUG] GET /manager/html
+Not Found: /manager/html
+[2016-04-17 16:27:17 +0000] [12166] [DEBUG] GET /
+[2016-04-17 16:27:18 +0000] [12167] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-17 20:51:08 +0000] [12167] [DEBUG] GET /cgi-bin/test-cgi
+Not Found: /cgi-bin/test-cgi
+[2016-04-17 20:51:08 +0000] [12167] [DEBUG] Ignoring EPIPE
+[2016-04-18 03:39:12 +0000] [12170] [DEBUG] GET /
+[2016-04-18 07:08:30 +0000] [12166] [DEBUG] GET /manager/html
+Not Found: /manager/html
+[2016-04-18 08:09:54 +0000] [12170] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-18 14:12:53 +0000] [12166] [DEBUG] GET /
+[2016-04-18 15:49:21 +0000] [12166] [DEBUG] GET /
+[2016-04-18 16:21:29 +0000] [12167] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-18 17:04:59 +0000] [12170] [DEBUG] GET /
+[2016-04-18 19:11:27 +0000] [12167] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-18 19:11:27 +0000] [12170] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-18 19:14:02 +0000] [12166] [DEBUG] GET /
+[2016-04-18 19:21:43 +0000] [12160] [INFO] Handling signal: term
+[2016-04-18 19:21:43 +0000] [12170] [INFO] Worker exiting (pid: 12170)
+[2016-04-18 19:21:43 +0000] [12166] [INFO] Worker exiting (pid: 12166)
+[2016-04-18 19:21:43 +0000] [12167] [INFO] Worker exiting (pid: 12167)
+[2016-04-18 19:21:43 +0000] [12160] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-18 19:21:44 +0000] [29106] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fa82ed51410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fa82ed51140>
+  pre_fork: <function pre_fork at 0x7fa82ed512a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fa82edc6f50>
+  pre_exec: <function pre_exec at 0x7fa82ed519b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fa82ed51578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fa82ed560c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fa82ed51b18>
+  post_request: <function post_request at 0x7fa82ed51c08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fa82ed516e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fa82ed51d70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fa82edc6de8>
+  worker_abort: <function worker_abort at 0x7fa82ed51848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fa82ed51ed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-18 19:21:44 +0000] [29106] [INFO] Starting gunicorn 19.4.5
+[2016-04-18 19:21:44 +0000] [29106] [DEBUG] Arbiter booted
+[2016-04-18 19:21:44 +0000] [29106] [INFO] Listening at: http://0.0.0.0:8001 (29106)
+[2016-04-18 19:21:44 +0000] [29106] [INFO] Using worker: sync
+[2016-04-18 19:21:44 +0000] [29112] [INFO] Booting worker with pid: 29112
+[2016-04-18 19:21:44 +0000] [29115] [INFO] Booting worker with pid: 29115
+[2016-04-18 19:21:45 +0000] [29117] [INFO] Booting worker with pid: 29117
+[2016-04-18 19:21:45 +0000] [29106] [DEBUG] 3 workers
+[2016-04-18 19:21:51 +0000] [29115] [DEBUG] GET /api/v1/flurry/
+[2016-04-18 19:21:53 +0000] [29117] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-18 19:21:58 +0000] [29115] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-18 19:22:15 +0000] [29117] [DEBUG] POST /api/v1/flurry/users/
+[2016-04-18 19:22:17 +0000] [29115] [DEBUG] GET /api/v1/flurry/
+[2016-04-18 19:22:19 +0000] [29112] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-18 19:22:31 +0000] [29115] [DEBUG] GET /api/v1/flurry/users/3/driver_id/
+[2016-04-18 19:22:34 +0000] [29117] [DEBUG] GET /api/v1/flurry/
+[2016-04-18 19:22:36 +0000] [29115] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-18 20:58:11 +0000] [29117] [DEBUG] GET /testproxy.php
+Not Found: /testproxy.php
+[2016-04-19 06:17:18 +0000] [29115] [DEBUG] GET /
+[2016-04-19 06:28:25 +0000] [29115] [DEBUG] GET /
+[2016-04-19 08:10:05 +0000] [29115] [DEBUG] GET /
+[2016-04-19 08:10:06 +0000] [29112] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-19 08:10:08 +0000] [29117] [DEBUG] GET /api/v1/flurry/
+[2016-04-19 08:10:13 +0000] [29112] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-19 08:10:16 +0000] [29117] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-19 08:13:51 +0000] [29115] [DEBUG] GET /api/v1/flurry/
+[2016-04-19 08:13:53 +0000] [29117] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-19 08:13:56 +0000] [29115] [DEBUG] GET /api/v1/flurry/cars/
+[2016-04-19 08:13:59 +0000] [29117] [DEBUG] GET /api/v1/flurry/data-drivers/
+[2016-04-19 08:14:01 +0000] [29112] [DEBUG] GET /api/v1/flurry/profiles/
+[2016-04-19 08:14:04 +0000] [29117] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-19 08:14:15 +0000] [29112] [DEBUG] POST /api/v1/flurry/users/
+[2016-04-19 08:14:24 +0000] [29112] [DEBUG] GET /api/v1/flurry/
+[2016-04-19 08:14:27 +0000] [29117] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-19 08:14:36 +0000] [29112] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-19 08:14:47 +0000] [29112] [DEBUG] GET /api/v1/flurry/users/
+[2016-04-19 08:15:03 +0000] [29115] [DEBUG] GET /api/v1/flurry/users/4/driver_id/
+[2016-04-19 08:15:11 +0000] [29112] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-19 08:15:15 +0000] [29115] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-19 08:36:59 +0000] [29112] [DEBUG] GET /
+[2016-04-19 08:43:55 +0000] [29117] [DEBUG] GET /
+[2016-04-19 08:43:58 +0000] [29115] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-19 08:44:00 +0000] [29112] [DEBUG] GET /api/v1/flurry/
+[2016-04-19 08:44:04 +0000] [29115] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-19 08:44:28 +0000] [29112] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data
+Not Found: /api/v1/flurry/drivers/8/insert_driving_data
+Internal Server Error: /api/v1/flurry/drivers/8/insert_driving_data
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 115, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 54.152.123.228/api/v1/flurry/drivers/8/insert_driving_data/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2016-04-19 09:03:11 +0000] [29112] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data
+Not Found: /api/v1/flurry/drivers/8/insert_driving_data
+Internal Server Error: /api/v1/flurry/drivers/8/insert_driving_data
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 115, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 54.152.123.228/api/v1/flurry/drivers/8/insert_driving_data/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2016-04-19 09:03:29 +0000] [29117] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:03:49 +0000] [29115] [DEBUG] GET /
+[2016-04-19 09:03:51 +0000] [29112] [DEBUG] GET /api/v1/flurry/
+[2016-04-19 09:03:52 +0000] [29115] [DEBUG] GET /api/v1/flurry/drivers/
+[2016-04-19 09:03:54 +0000] [29117] [DEBUG] GET /api/v1/flurry/data-drivers/8/
+[2016-04-19 09:04:10 +0000] [29115] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:04:24 +0000] [29112] [DEBUG] GET /api/v1/flurry/data-drivers/8/
+[2016-04-19 09:04:32 +0000] [29117] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:05:33 +0000] [29115] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:05:42 +0000] [29112] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:06:14 +0000] [29115] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:06:38 +0000] [29117] [DEBUG] GET /api/v1/flurry/data-drivers/8/
+[2016-04-19 09:06:49 +0000] [29112] [DEBUG] PUT /api/v1/flurry/data-drivers/8/
+[2016-04-19 09:06:56 +0000] [29115] [DEBUG] PUT /api/v1/flurry/data-drivers/8/
+[2016-04-19 09:07:36 +0000] [29112] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:08:12 +0000] [29117] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:08:19 +0000] [29115] [DEBUG] GET /api/v1/flurry/data-drivers/8/
+[2016-04-19 09:12:54 +0000] [29112] [DEBUG] GET /
+[2016-04-19 09:12:54 +0000] [29115] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2016-04-19 09:18:23 +0000] [29117] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:18:57 +0000] [29115] [DEBUG] GET /s/ref=nb_sb_noss_2
+Not Found: /s/ref=nb_sb_noss_2
+[2016-04-19 09:22:58 +0000] [29106] [INFO] Handling signal: term
+[2016-04-19 09:22:58 +0000] [29112] [INFO] Worker exiting (pid: 29112)
+[2016-04-19 09:22:58 +0000] [29115] [INFO] Worker exiting (pid: 29115)
+{u'name': u'1', u'value': u'1', u'time': u'1'}
+[2016-04-19 09:22:58 +0000] [29117] [INFO] Worker exiting (pid: 29117)
+{u'data': [{u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056464023'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056464527'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056465038'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056465540'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056466043'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056466554'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056467064'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056467572'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056468080'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056468588'}]}
+[2016-04-19 09:22:58 +0000] [29106] [INFO] Shutting down: Master
