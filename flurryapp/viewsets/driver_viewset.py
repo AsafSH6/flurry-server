@@ -19,8 +19,11 @@ class DriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
 
     @detail_route(methods=['POST'])
     def insert_driving_data(self, request, *args, **kwargs):
+#	print request.data, type(request.data)
         driver = self.get_object()
         driving_data_json = request.data
+        if isinstance(driving_data_json, unicode):
+            driving_data_json = json.loads(driving_data_json)
         if isinstance(driving_data_json, (dict, list)):
             print driving_data_json
             driver.driving_data.data.append(driving_data_json)

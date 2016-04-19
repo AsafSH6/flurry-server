@@ -3139,3 +3139,108 @@ Not Found: /s/ref=nb_sb_noss_2
 [2016-04-19 09:22:58 +0000] [29117] [INFO] Worker exiting (pid: 29117)
 {u'data': [{u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056464023'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056464527'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056465038'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056465540'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056466043'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056466554'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056467064'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056467572'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056468080'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056468588'}]}
 [2016-04-19 09:22:58 +0000] [29106] [INFO] Shutting down: Master
+Starting flurry as ubuntu
+[2016-04-19 09:26:12 +0000] [32291] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fa78f3de410>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fa78f3de140>
+  pre_fork: <function pre_fork at 0x7fa78f3de2a8>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 1000
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 3
+  proc_name: flurry
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fa78f453f50>
+  pre_exec: <function pre_exec at 0x7fa78f3de9b0>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x7fa78f3de578>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x7fa78f3e30c8>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fa78f3deb18>
+  post_request: <function post_request at 0x7fa78f3dec08>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fa78f3de6e0>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x7fa78f3ded70>
+  chdir: /home/ubuntu/flurry
+  paste: None
+  default_proc_name: flurry.wsgi:application
+  errorlog: -
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x7fa78f453de8>
+  worker_abort: <function worker_abort at 0x7fa78f3de848>
+  bind: ['0.0.0.0:8001']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fa78f3deed8>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2016-04-19 09:26:12 +0000] [32291] [INFO] Starting gunicorn 19.4.5
+[2016-04-19 09:26:12 +0000] [32291] [DEBUG] Arbiter booted
+[2016-04-19 09:26:12 +0000] [32291] [INFO] Listening at: http://0.0.0.0:8001 (32291)
+[2016-04-19 09:26:12 +0000] [32291] [INFO] Using worker: sync
+[2016-04-19 09:26:12 +0000] [32297] [INFO] Booting worker with pid: 32297
+[2016-04-19 09:26:12 +0000] [32298] [INFO] Booting worker with pid: 32298
+[2016-04-19 09:26:12 +0000] [32301] [INFO] Booting worker with pid: 32301
+[2016-04-19 09:26:12 +0000] [32291] [DEBUG] 3 workers
+[2016-04-19 09:26:26 +0000] [32298] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:26:34 +0000] [32301] [DEBUG] GET /api/v1/flurry/data-drivers/8/
+[2016-04-19 09:35:04 +0000] [32301] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data/
+[2016-04-19 09:35:17 +0000] [32297] [DEBUG] GET /api/v1/flurry/data-drivers/8/
+[2016-04-19 10:37:00 +0000] [32301] [DEBUG] POST /api/v1/flurry/drivers/8/insert_driving_data
+Not Found: /api/v1/flurry/drivers/8/insert_driving_data
+Internal Server Error: /api/v1/flurry/drivers/8/insert_driving_data
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 115, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 54.152.123.228/api/v1/flurry/drivers/8/insert_driving_data/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2016-04-19 10:38:05 +0000] [32291] [INFO] Handling signal: term
+[2016-04-19 10:38:05 +0000] [32297] [INFO] Worker exiting (pid: 32297)
+[2016-04-19 10:38:05 +0000] [32298] [INFO] Worker exiting (pid: 32298)
+[{u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'1', u'value': u'1', u'time': u'1'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056464023'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'2', u'value': u'2', u'time': u'2'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056464527'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'3', u'value': u'3', u'time': u'3'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056465038'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'4', u'value': u'4', u'time': u'4'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056465540'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'5', u'value': u'5', u'time': u'5'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056466043'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'6', u'value': u'6', u'time': u'6'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056466554'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'7', u'value': u'7', u'time': u'7'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056467064'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'8', u'value': u'8', u'time': u'8'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056467572'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'9', u'value': u'9', u'time': u'9'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056468080'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'10', u'value': u'10', u'time': u'10'}, {u'name': u'GPS', u'value': u'0.0|0.0', u'time': u'1461056468588'}]
+[2016-04-19 10:38:05 +0000] [32301] [INFO] Worker exiting (pid: 32301)
+[{u'rpm': u'1', u'gps': {u'lat': u'1', u'lon': u'1'}, u'speed': u'1', u'time': u'1'}, {u'rpm': u'2', u'gps': {u'lat': u'2', u'lon': u'2'}, u'speed': u'2', u'time': u'2'}, {u'rpm': u'3', u'gps': {u'lat': u'3', u'lon': u'3'}, u'speed': u'3', u'time': u'3'}, {u'rpm': u'4', u'gps': {u'lat': u'4', u'lon': u'4'}, u'speed': u'4', u'time': u'4'}, {u'rpm': u'5', u'gps': {u'lat': u'5', u'lon': u'5'}, u'speed': u'5', u'time': u'5'}]
+[2016-04-19 10:38:05 +0000] [32291] [INFO] Shutting down: Master
