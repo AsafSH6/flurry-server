@@ -24,17 +24,17 @@ class UserViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
                 driver_name = request.data.pop('name')[0]
                 user = serializer.save()
                 driver = Driver(name=driver_name, user=user).save()
-                return Response(driver.pk, status=status.HTTP_201_CREATED)
+                return Response({'driver_id': driver.pk, 'user_id': user.pk}, status=status.HTTP_201_CREATED)
             else:
                 return Response('User creation failed, make sure that user does not already exist', status=status.HTTP_400_BAD_REQUEST)
         except KeyError, IndexError:
             return Response('driver name is missing', status=status.HTTP_400_BAD_REQUEST)
 
-    @detail_route(methods=['GET'])
-    def driver_id(self, request, *args, **kwargs):
-        user = self.get_object()
-        driver = user.drivers.first()
-        if driver is not None:
-            return Response(driver.pk, status=status.HTTP_200_OK)
-        else:
-            return Response(None, status=status.HTTP_200_OK)
+    # @detail_route(methods=['GET'])
+    # def driver_id(self, request, *args, **kwargs):
+    #     user = self.get_object()
+    #     driver = user.drivers.first()
+    #     if driver is not None:
+    #         return Response(driver.pk, status=status.HTTP_200_OK)
+    #     else:
+    #         return Response(None, status=status.HTTP_200_OK)

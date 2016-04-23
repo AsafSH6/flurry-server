@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from flurryapp.models import Driver
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -8,8 +7,9 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'name')
-
+        fields = ('id', 'name', 'username', 'password')
+        extra_kwargs = {'password': {'write_only': True}}
+        
     def create(self, validated_data):
         validated_data.pop('name')  # name is not a property of user model
-        return super(UserSerializer, self).create(validated_data)
+        return User.objects.create_user(**validated_data)
