@@ -14,7 +14,7 @@ class UserViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
     NestedViewSetMixin is an Extension for DRF - makes possible to send simple
         post/get requests.
     """
-    queryset = User.objects.all()
+    queryset = User.objects.filter(is_staff=False, is_superuser=False)
     serializer_class = UserSerializer
 
     def create(self, request, *args, **kwargs):
