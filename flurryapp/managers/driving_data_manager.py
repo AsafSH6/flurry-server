@@ -1,5 +1,8 @@
+from __future__ import unicode_literals
 from django.db import models
 import math
+
+from flurryapp.utils.maximum_limitation_of_speed import MaximumLimitationOfSpeedAPIClient
 
 SPEED_RANGE = 5
 
@@ -8,6 +11,7 @@ class DrivingDataManager(models.Manager):
     def __init__(self):
         super(DrivingDataManager, self).__init__()
         self.last_speed_interval_value = SPEED_RANGE
+        self.speed_limit_client = MaximumLimitationOfSpeedAPIClient()
 
     def append_new_driving_data(self, driving_data):
         '''
@@ -43,7 +47,10 @@ class DrivingDataManager(models.Manager):
             print item
 
     def __append_maximum_limition_of_speed(self, data_unit):
-        data_unit['maximum_limition_of_speed'] = 0
+        data_unit['maximum_limition_of_speed'] = self.speed_limit_client.get_maximum_limitation_of_speed_in_kmph(
+            lat=data_unit['gps']['lat'],
+            lon=data_unit['gps']['lon']
+        )
 
     def __append_angular_change(self, driving_data, data_unit_index):
         if data_unit_index is 0:
@@ -53,7 +60,7 @@ class DrivingDataManager(models.Manager):
             current_coordinates = driving_data[data_unit_index]['gps']
             sub_y = previous_coordinates['lon'] - current_coordinates['lon']
             sub_x = previous_coordinates['lat'] - current_coordinates['lat']
-            if sub_y is not 0:
+            if sub_y != 0:
                 dev = sub_x / sub_y
                 driving_data[data_unit_index]['angular_change'] = math.tan(dev)
             else:
@@ -80,8 +87,8 @@ if __name__ == '__main__':
             'speed': 3,
             'rpm': 123,
             'gps': {
-                'lat': 123,
-                'lon': 123
+                'lat': 31.891520,
+                'lon': 34.921453
             }
         },
         {
@@ -89,8 +96,8 @@ if __name__ == '__main__':
             'speed': 5,
             'rpm': 133,
             'gps': {
-                'lat': 124,
-                'lon': 124
+                'lat': 31.891520,
+                'lon': 34.921453
             }
         },
         {
@@ -98,8 +105,8 @@ if __name__ == '__main__':
             'speed': 8,
             'rpm': 143,
             'gps': {
-                'lat': 125,
-                'lon': 125
+                'lat': 31.910071,
+                'lon': 34.883599
             }
         },
     ])
