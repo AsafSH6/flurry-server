@@ -13,7 +13,7 @@ class DrivingDataManager(models.Manager):
         self.last_speed_interval_value = SPEED_RANGE
         self.speed_limit_client = MaximumLimitationOfSpeedAPIClient()
 
-    def append_new_driving_data(self, driving_data):
+    def append_new_driving_data(self, id, driving_data):
         '''
         driving_data format:
          [
