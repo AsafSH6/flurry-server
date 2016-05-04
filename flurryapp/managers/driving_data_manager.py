@@ -40,11 +40,13 @@ class DrivingDataManager(models.Manager):
         '''
         for data_unit_index, data_unit in enumerate(driving_data):
             self.__append_maximum_limition_of_speed(data_unit)
-            self.__append_angular_change(driving_data, data_unit_index)
-            self.__append_speed_intervals(driving_data, data_unit_index)
+            # self.__append_angular_change(driving_data, data_unit_index)
+            # self.__append_speed_intervals(driving_data, data_unit_index)
 
-        for item in driving_data:
-            print item
+        # for item in driving_data:
+        #     print item
+        self.data.append(driving_data)
+        self.save()
 
     def __append_maximum_limition_of_speed(self, data_unit):
         data_unit['maximum_limition_of_speed'] = self.speed_limit_client.get_maximum_limitation_of_speed_in_kmph(

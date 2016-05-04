@@ -24,9 +24,8 @@ class DriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
         if isinstance(driving_data_json, unicode):
             driving_data_json = json.loads(driving_data_json)
         if isinstance(driving_data_json, (dict, list)):
-            print driving_data_json
-            driver.driving_data.data.append(driving_data_json)
-            driver.driving_data.save()
+            # print driving_data_json
+            driver.driving_data.append_new_driving_data(driving_data_json)
             return Response(status=status.HTTP_202_ACCEPTED)
         return Response(status=status.HTTP_400_BAD_REQUEST)
 

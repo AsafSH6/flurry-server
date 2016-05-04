@@ -35,3 +35,4 @@ if __name__ == '__main__':
     client = MaximumLimitationOfSpeedAPIClient()
     print client.get_maximum_limitation_of_speed_in_kmph(31.891520, 34.921453)
     print client.get_maximum_limitation_of_speed_in_kmph(31.910071, 34.883599)
+    print client.get_maximum_limitation_of_speed_in_kmph(32.036529, 34.843201)
