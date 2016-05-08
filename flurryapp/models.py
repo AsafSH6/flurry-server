@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.postgres.fields import JSONField
 from flurryapp.managers.profile_manager import ProfileManager
+from flurryapp.managers.driver_manager import DriverManager
 
 
 class DataDriver(models.Model):
@@ -18,6 +19,8 @@ class Driver(models.Model):
     name = models.CharField(max_length=255)
     creation_date = models.DateField(auto_now_add=True)
     driving_data = models.ForeignKey(DataDriver, related_name='driver')
+
+    objects = DriverManager()
 
     def __unicode__(self):
         return u'{id}--{name}--{date}'.format(id=self.id,
