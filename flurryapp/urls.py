@@ -5,7 +5,7 @@ from flurryapp import viewsets
 
 router = ExtendedDefaultRouter()
 
-router.register(r'data-drivers', viewsets.DataDriverViewSet, base_name='data-drivers')\
+router.register(r'data-drivers', viewsets.DataDriverViewSet, base_name='datadriver')\
     .register(r'drivers', viewsets.DriverViewSet,  base_name='data-drivers-driver', parents_query_lookups=['data_driver'])
 
 router.register(r'cars', viewsets.CarViewSet, base_name='cars')
