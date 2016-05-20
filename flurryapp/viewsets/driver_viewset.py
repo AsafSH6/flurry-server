@@ -27,6 +27,8 @@ class DriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
                 driver_id = self.kwargs['pk']
                 Driver.objects.append_new_driving_data(driver_id=driver_id, driving_data=driving_data_json)
             except Exception as e:
+                # import traceback
+                # traceback.print_exc()
                 driver = self.get_object()
                 driver.driving_data.data.append(driving_data_json)
                 driver.driving_data.save()

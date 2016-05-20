@@ -25,7 +25,13 @@ class MaximumLimitationOfSpeedAPIClient(object):
 
     def __get_maximum_speed_in_kmph_from_response(self, response):
         response_json = response.json()['Response']
-        maximum_speed = response_json['Link'][0]['SpeedLimit']
+        speed_details = response_json['Link'][0]
+        if 'SpeedLimit' in speed_details:
+            maximum_speed = speed_details['SpeedLimit']
+        elif 'BaseSpeed' in speed_details['DynamicSpeedInfo']:
+            maximum_speed = speed_details['DynamicSpeedInfo']['BaseSpeed']
+        else:
+            return -1
         return self.__convert_speed_to_kmph(speed=maximum_speed)
 
     def __convert_speed_to_kmph(self, speed):

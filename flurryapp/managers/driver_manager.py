@@ -84,7 +84,7 @@ class DriverManager(models.Manager):
 
 # if __name__ == '__main__':
 #     m = DriverManager()
-#     m.append_new_driving_data(7, [
+#     m.append_new_driving_data(33, [
 #         {
 #             'time': 123,
 #             'speed': 3,
