@@ -6,4 +6,3 @@ class DataDriverSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DataDriver
-

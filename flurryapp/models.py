@@ -9,6 +9,9 @@ from flurryapp.managers.driver_manager import DriverManager
 class DataDriver(models.Model):
     data = JSONField(default=[])
 
+    def __unicode__(self):
+        return 'id: {pk}'.format(pk=self.pk)
+
     def save(self, *args, **kwargs):
         super(DataDriver, self).save(*args, **kwargs)
         return self
@@ -18,7 +21,7 @@ class Driver(models.Model):
     user = models.ForeignKey(User, null=True, related_name='drivers')
     name = models.CharField(max_length=255)
     creation_date = models.DateField(auto_now_add=True)
-    driving_data = models.ForeignKey(DataDriver, related_name='driver')
+    driving_data = models.ForeignKey(DataDriver, related_name='driver', null=True)
 
     objects = DriverManager()
 
@@ -28,10 +31,8 @@ class Driver(models.Model):
                                               date=self.creation_date.strftime("%d/%m/%y"))
 
     def save(self, *args, **kwargs):
-        try:
-            self.driving_data
-        except DataDriver.DoesNotExist:
-            self.driving_data = DataDriver().save()
+        if self.driving_data is None:
+            self.driving_data = DataDriver.objects.create()
         super(Driver, self).save(*args, **kwargs)
         return self
 

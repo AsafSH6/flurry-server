@@ -6,7 +6,7 @@ from flurryapp.serializers.user_serializer import UserSerializer
 class DriverSerializer(serializers.HyperlinkedModelSerializer):
     profiles = serializers.HyperlinkedRelatedField(many=True, view_name='profiles-detail', read_only=True)
     cars = serializers.HyperlinkedRelatedField(many=True, view_name='cars-detail', read_only=True)
-    driving_data = serializers.HyperlinkedIdentityField(view_name='data-drivers-detail')
+    # driving_data = serializers.HyperlinkedIdentityField(view_name='data-drivers-detail')  # return the current object pk, findout how to define view_name
     user = UserSerializer(instance='user', read_only=True)
 
     """
