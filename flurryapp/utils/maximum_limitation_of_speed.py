@@ -24,6 +24,8 @@ class MaximumLimitationOfSpeedAPIClient(object):
         return maximum_speed_limit_in_kmph
 
     def __get_maximum_speed_in_kmph_from_response(self, response):
+        if response.status_code != 200:
+            return -1
         response_json = response.json()['Response']
         speed_details = response_json['Link'][0]
         if 'SpeedLimit' in speed_details:
