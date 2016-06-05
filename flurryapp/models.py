@@ -12,6 +12,15 @@ class DataDriver(models.Model):
     def __unicode__(self):
         return 'id: {pk}'.format(pk=self.pk)
 
+    def __getitem__(self, item):
+        return self.data[item]
+
+    def __setitem__(self, key, value):
+        self.data[key] = value
+
+    def __len__(self):
+        return len(self.data)
+
     def save(self, *args, **kwargs):
         super(DataDriver, self).save(*args, **kwargs)
         return self
@@ -29,6 +38,15 @@ class Driver(models.Model):
         return u'{id}--{name}--{date}'.format(id=self.id,
                                               name=self.name,
                                               date=self.creation_date.strftime("%d/%m/%y"))
+
+    def __getitem__(self, item):
+        return self.driving_data[item]
+
+    def __setitem__(self, key, value):
+        self.driving_data[key] = value
+
+    def __len__(self):
+        return len(self.driving_data)
 
     def save(self, *args, **kwargs):
         if self.driving_data is None:
