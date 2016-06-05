@@ -20,8 +20,8 @@ class DataDriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
     @detail_route(methods=['GET'])
     def merged(self, request, *args, **kwargs):
         driving_data = self.get_object()
-        # data = reduce(lambda x, y: x + y, driving_data.data)
-        data = [self.__convert_data_unit_values_to_numeric_values(data_unit) for ride in driving_data.data for data_unit in ride]
+        data = reduce(lambda x, y: x + y, driving_data.data)
+        # data = [self.__convert_data_unit_values_to_numeric_values(data_unit) for ride in driving_data.data for data_unit in ride]
         return Response(data, status=status.HTTP_200_OK)
 
     def __convert_data_unit_values_to_numeric_values(self, data_unit):
