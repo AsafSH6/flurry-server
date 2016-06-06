@@ -52,6 +52,7 @@ class Driver(models.Model):
         if self.driving_data is None:
             self.driving_data = DataDriver.objects.create()
         super(Driver, self).save(*args, **kwargs)
+        self.driving_data.save()
         return self
 
 

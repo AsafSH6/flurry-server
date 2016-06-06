@@ -13,6 +13,17 @@ class DriverManager(models.Manager):
         self.last_speed_interval_value = SPEED_RANGE
         self.speed_limit_client = MaximumLimitationOfSpeedAPIClient()
 
+    def check_for_duplicate_rides(self):
+        all_drivers = self.all()
+        for driver in all_drivers:
+            print 'checking driver:', driver.name
+
+            for i in xrange(len(driver) - 1):
+                if all(driver[i][j] == driver[i + 1][j] for j in xrange(min(len(driver[i]), len(driver[i + 1])))):
+                    print i
+                else:
+                    print 'not', i
+
     def append_new_driving_data(self, driver_id, driving_data):
         '''
         driving_data format:
