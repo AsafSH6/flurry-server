@@ -18,11 +18,14 @@ class DriverManager(models.Manager):
         for driver in all_drivers:
             print 'checking driver:', driver.name
 
-            for i in xrange(len(driver) - 1):
+            num_of_rides = len(driver)
+            print 'driver have', num_of_rides, 'rides'
+            for i in xrange(num_of_rides - 1):
                 if all(driver[i][j] == driver[i + 1][j] for j in xrange(min(len(driver[i]), len(driver[i + 1])))):
-                    print i
-                else:
-                    print 'not', i
+                    print '*', i, '==', i + 1, '*'
+                # else:
+                #     print i, '=/=', i + 1
+            print '\n'
 
     def append_new_driving_data(self, driver_id, driving_data):
         '''
@@ -51,7 +54,7 @@ class DriverManager(models.Manager):
         '''
         driver = self.get(id=driver_id)
         for data_unit_index, data_unit in enumerate(driving_data):
-            self.__append_maximum_limition_of_speed(data_unit)
+            self.__append_maximum_limitation_of_speed(data_unit)
             # self.__append_angular_change(driving_data, data_unit_index)
             # self.__append_speed_intervals(driving_data, data_unit_index)
 
@@ -60,7 +63,7 @@ class DriverManager(models.Manager):
         driver.driving_data.data.append(driving_data)
         driver.driving_data.save()
 
-    def __append_maximum_limition_of_speed(self, data_unit):
+    def __append_maximum_limitation_of_speed(self, data_unit):
         data_unit['maximum_limition_of_speed'] = self.speed_limit_client.get_maximum_limitation_of_speed_in_kmph(
             lat=data_unit['gps']['lat'],
             lon=data_unit['gps']['lon']
@@ -92,35 +95,3 @@ class DriverManager(models.Manager):
                 driving_data[data_unit_index]['speed_intervals'] = 0
                 self.last_speed_interval_value = current_speed
 
-
-# if __name__ == '__main__':
-#     m = DriverManager()
-#     m.append_new_driving_data(33, [
-#         {
-#             'time': 123,
-#             'speed': 3,
-#             'rpm': 123,
-#             'gps': {
-#                 'lat': 31.891520,
-#                 'lon': 34.921453
-#             }
-#         },
-#         {
-#             'time': 124,
-#             'speed': 5,
-#             'rpm': 133,
-#             'gps': {
-#                 'lat': 31.891520,
-#                 'lon': 34.921453
-#             }
-#         },
-#         {
-#             'time': 125,
-#             'speed': 8,
-#             'rpm': 143,
-#             'gps': {
-#                 'lat': 31.910071,
-#                 'lon': 34.883599
-#             }
-#         },
-#     ])
