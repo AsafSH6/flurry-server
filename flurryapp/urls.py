@@ -23,4 +23,5 @@ drivers_router.register(r'profiles', viewsets.ProfileViewSet, base_name='driver-
 
 urlpatterns = router.urls
 
-urlpatterns += [url(r'user-log-in/', viewsets.UserLogInAPIViewSet.as_view(), name='user_log_in')]
+urlpatterns += [url(r'user-log-in/', viewsets.UserLogInAPIViewSet.as_view(), name='user_log_in'),
+                url(r'extract-features/', viewsets.FeatureExtractAPIViewSet.as_view(), name='feature_extraction')]
