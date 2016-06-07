@@ -21,6 +21,12 @@ class DataDriver(models.Model):
     def __len__(self):
         return len(self.data)
 
+    def __iter__(self):
+        return self.data.__iter__()
+
+    def next(self):
+        return self.data.next()
+
     def save(self, *args, **kwargs):
         super(DataDriver, self).save(*args, **kwargs)
         return self
@@ -47,6 +53,14 @@ class Driver(models.Model):
 
     def __len__(self):
         return len(self.driving_data)
+
+    def __iter__(self):
+        print 'iter'
+        return self.driving_data.__iter__()
+
+    def next(self):
+        print 'next'
+        return self.driving_data.next()
 
     def save(self, *args, **kwargs):
         if self.driving_data is None:

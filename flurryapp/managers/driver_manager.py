@@ -7,6 +7,11 @@ from flurryapp.utils.maximum_limitation_of_speed import MaximumLimitationOfSpeed
 SPEED_RANGE = 5
 
 
+MILLISECOND_TO_MINUTE = 60000
+
+DEFAULT_VALUES_TO_CHECK = ['speed', 'rpm']#, 'throttle', 'accelerator']
+
+
 class DriverManager(models.Manager):
     def __init__(self):
         super(DriverManager, self).__init__()
@@ -26,6 +31,62 @@ class DriverManager(models.Manager):
                 # else:
                 #     print i, '=/=', i + 1
             print '\n'
+
+    def extract_features(self, percents_of_driving_data=100, offset_from_beginning=0):
+        '''
+        extracting features of every driver in the DB
+        :return: dict of driver name as key and list of features as value
+        '''
+        driver_name_to_list_of_features_dict = dict()
+        for driver in [self.get(id=49)]:
+        # for driver in self.all():
+            if len(driver) is not 0:
+                print 'checking driver', driver.name
+                driver_name_to_list_of_features_dict[driver.name] = list()
+
+                driver_driving_data_merged = reduce(lambda x, y: x + y, driver.driving_data.data)
+                num_of_data_units = len(driver_driving_data_merged)
+                print 'num of data units', num_of_data_units
+
+                beginning = int(num_of_data_units / 100.0 * offset_from_beginning)
+                end = int((num_of_data_units - beginning) / 100.0 * percents_of_driving_data)
+                print 'beginning', beginning
+                print 'end', end
+
+                sliced_driving_data = driver_driving_data_merged[beginning:end]
+                print 'number of sliced data', len(sliced_driving_data)
+
+                driver_name_to_list_of_features_dict[driver.name] += self.__average_per_minute(sliced_driving_data)
+                driver_name_to_list_of_features_dict[driver.name].append(self.__calculate_over_max_speed_precentage(sliced_driving_data))
+
+                print '\n'
+
+        print driver_name_to_list_of_features_dict
+
+    def __average_per_minute(self, data, keys=DEFAULT_VALUES_TO_CHECK):
+        beginning_of_the_minute = int(data[0]['time'])
+        dict_of_key_to_list_of_lists_of_values_per_minute = {key: [[]] for key in keys}
+
+        for data_unit in data:
+            data_unit_time = int(data_unit['time'])
+            if (beginning_of_the_minute + MILLISECOND_TO_MINUTE) - data_unit_time < 0:
+                beginning_of_the_minute = data_unit_time
+                for key in keys:
+                    dict_of_key_to_list_of_lists_of_values_per_minute[key].append([])
+            for key in keys:
+                dict_of_key_to_list_of_lists_of_values_per_minute[key][-1].append(float(data_unit[key]))
+
+        for key in keys:
+            list_of_lists_of_values_per_minute = dict_of_key_to_list_of_lists_of_values_per_minute[key]
+            average_of_values_per_minute = sum(sum(values_per_minute) / len(values_per_minute) for values_per_minute in list_of_lists_of_values_per_minute)
+            dict_of_key_to_list_of_lists_of_values_per_minute[key] = average_of_values_per_minute / len(list_of_lists_of_values_per_minute)
+
+        print dict_of_key_to_list_of_lists_of_values_per_minute
+        return dict_of_key_to_list_of_lists_of_values_per_minute.values()
+
+    def __calculate_over_max_speed_precentage(self, data, minimum_speed=0):
+        a = [float(data_unit['speed']) > float(data_unit['maximum_limition_of_speed']) for data_unit in data if float(data_unit['speed']) > minimum_speed]
+        return float(sum(a)) / len(a)
 
     def append_new_driving_data(self, driver_id, driving_data):
         '''
@@ -55,11 +116,7 @@ class DriverManager(models.Manager):
         driver = self.get(id=driver_id)
         for data_unit_index, data_unit in enumerate(driving_data):
             self.__append_maximum_limitation_of_speed(data_unit)
-            # self.__append_angular_change(driving_data, data_unit_index)
-            # self.__append_speed_intervals(driving_data, data_unit_index)
 
-        # for item in driving_data:
-        #     print item
         driver.driving_data.data.append(driving_data)
         driver.driving_data.save()
 
@@ -68,30 +125,4 @@ class DriverManager(models.Manager):
             lat=data_unit['gps']['lat'],
             lon=data_unit['gps']['lon']
         )
-
-    def __append_angular_change(self, driving_data, data_unit_index):
-        if data_unit_index is 0:
-            driving_data[data_unit_index]['angular_change'] = 0
-        else:
-            previous_coordinates = driving_data[data_unit_index - 1]['gps']
-            current_coordinates = driving_data[data_unit_index]['gps']
-            sub_y = previous_coordinates['lon'] - current_coordinates['lon']
-            sub_x = previous_coordinates['lat'] - current_coordinates['lat']
-            if sub_y != 0:
-                dev = sub_x / sub_y
-                driving_data[data_unit_index]['angular_change'] = math.tan(dev)
-            else:
-                driving_data[data_unit_index]['angular_change'] = 0
-
-    def __append_speed_intervals(self, driving_data, data_unit_index):
-        if data_unit_index is 0:
-            driving_data[data_unit_index]['speed_intervals'] = 0
-        else:
-            current_speed = driving_data[data_unit_index]['speed']
-            if self.last_speed_interval_value - SPEED_RANGE <= current_speed <= self.last_speed_interval_value + SPEED_RANGE:
-                previous_speed_intervals = driving_data[data_unit_index - 1]['speed_intervals']
-                driving_data[data_unit_index]['speed_intervals'] = previous_speed_intervals + 1
-            else:
-                driving_data[data_unit_index]['speed_intervals'] = 0
-                self.last_speed_interval_value = current_speed
 
