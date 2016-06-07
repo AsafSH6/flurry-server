@@ -1,8 +1,8 @@
 import django
+
 django.setup()
 
-from flurryapp.models import *
-
-
 if __name__ == '__main__':
+    from flurryapp.models import *
+
     Driver.objects.check_for_duplicate_rides()
