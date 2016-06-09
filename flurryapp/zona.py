@@ -2,8 +2,8 @@ import django
 django.setup()
 
 from flurryapp.models import *
-#
-# Driver.objects.extract_features()
+
+Driver.objects.extract_features()
 
 # from sklearn import datasets
 # from sklearn.naive_bayes import GaussianNB
@@ -19,6 +19,8 @@ from flurryapp.models import *
 
 # print [5] * 3
 
-d = Driver.objects.all()[1]
-for ride in d:
-    print ride[-1]
+# d = Driver.objects.all()[1]
+# for ride in d:
+#     print ride[-1]
+
+# print sum([])

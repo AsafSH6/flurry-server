@@ -1,12 +1,13 @@
 from __future__ import unicode_literals
 from django.db import models
-import math
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
 
 from flurryapp.utils.maximum_limitation_of_speed import MaximumLimitationOfSpeedAPIClient
 
 
 MILLISECOND_TO_MINUTE = 60000
-
+DRASTIC_SPEED_THRESHOLD = 3
 DEFAULT_VALUES_TO_CHECK = ['speed', 'rpm']#, 'throttle', 'accelerator']
 
 
@@ -80,25 +81,34 @@ class DriverManager(models.Manager):
         :return: dict of driver name as key and list of features as value
         '''
         driver_name_to_list_of_features_dict = dict()
-        # for driver in [self.get(id=49)]:
-        for driver in self.all():
+        for driver in [self.get(id=79)]:
+        # for driver in self.all():
             if len(driver) is not 0:
-                print 'checking driver', driver.name
                 driver_name_to_list_of_features_dict[driver.name] = list()
 
                 driver_driving_data = driver.driving_data.data
 
                 for ride in driver_driving_data:
+                    # self.__preprocessor(ride)
                     ride_as_vector = []
                     ride_as_vector += self.__average_per_minute(ride)
                     ride_as_vector.append(self.__calculate_over_max_speed_precentage(ride))
                     ride_as_vector.append(self.__average_throttle_pressed_per_minitue(ride))
+                    ride_as_vector.append(self.__calculate_average_drastic_speed_changes_per_minute(ride))
                     driver_name_to_list_of_features_dict[driver.name].append(ride_as_vector)
 
-                print '\n'
+        for driver in driver_name_to_list_of_features_dict:
+            print 'driver:', driver
+            print driver_name_to_list_of_features_dict[driver]
 
-        # print driver_name_to_list_of_features_dict
         return driver_name_to_list_of_features_dict
+
+    # def __preprocessor(self, data):
+    #     min_max_scaler = MinMaxScaler()
+    #     vals = [float(data_unit['throttle']) for data_unit in data]
+    #     scaled = min_max_scaler.fit_transform(vals)
+    #
+
 
     def __average_per_minute(self, data, keys=DEFAULT_VALUES_TO_CHECK):
         beginning_of_the_minute = int(data[0]['time'])
@@ -125,6 +135,28 @@ class DriverManager(models.Manager):
         a = [float(data_unit['speed']) > float(data_unit['maximum_limition_of_speed']) for data_unit in data if float(data_unit['speed']) > minimum_speed]
         return float(sum(a)) / len(a) if len(a) > 0 else 0
 
+    def __calculate_average_drastic_speed_changes_per_minute(self, data, threshold=DRASTIC_SPEED_THRESHOLD):
+        beginning_of_the_minute = int(data[0]['time'])
+        list_of_lists_of_drastic_changes_per_minute = [[]]
+
+        last_speed = int(data[0]['speed'])
+        for data_unit in data:
+            data_unit_time = int(data_unit['time'])
+            if (beginning_of_the_minute + MILLISECOND_TO_MINUTE) - data_unit_time < 0:
+                list_of_lists_of_drastic_changes_per_minute.append([])
+
+            current_speed = int(data_unit['speed'])
+            if threshold < abs(current_speed - last_speed):
+                change_to_calculate = current_speed - threshold - last_speed if current_speed > last_speed else last_speed - threshold - current_speed
+                change_to_calculate = 1
+                list_of_lists_of_drastic_changes_per_minute[-1].append(change_to_calculate)  # the drastic change itself
+
+            last_speed = current_speed
+        list_of_avg_for_each_list = lambda l: [float(sum(sublist)) / len(sublist) if len(sublist) > 0 else 0 for sublist in l]
+        avg_of_each_list_of_drastic_speed_change_per_minute = list_of_avg_for_each_list(l=list_of_lists_of_drastic_changes_per_minute)
+        return float(sum(avg_of_each_list_of_drastic_speed_change_per_minute)) / len(avg_of_each_list_of_drastic_speed_change_per_minute)
+
+
     def __average_throttle_pressed_per_minitue(self, data):
         beginning_of_the_minute = int(data[0]['time'])
         list_of_presses_per_minute = [0]
@@ -144,6 +176,7 @@ class DriverManager(models.Manager):
 
         # print list_of_presses_per_minute
         return float(sum(list_of_presses_per_minute)) / len(list_of_presses_per_minute)
+
 
     def __append_maximum_limitation_of_speed(self, data_unit):
         data_unit['maximum_limition_of_speed'] = self.speed_limit_client.get_maximum_limitation_of_speed_in_kmph(
