@@ -6,9 +6,7 @@ from flurryapp.models import Driver
 
 
 class FeatureExtractAPIViewSet(APIView):
-    def get(self, request, *args, **kwargs):
-        percentage = request.query_params.get('percentage', 100)
-        offset = request.query_params.get('offset', 0)
 
-        extracted_features = Driver.objects.extract_features(percentage, offset)
+    def get(self, request, *args, **kwargs):
+        extracted_features = Driver.objects.extract_features()
         return Response(extracted_features, status=status.HTTP_200_OK)

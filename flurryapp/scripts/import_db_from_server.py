@@ -5,6 +5,7 @@ django.setup()
 
 from flurryapp.models import *
 import requests as req
+import getpass
 
 SERVER_API_URL = 'http://54.152.123.228/api/v1/flurry/'
 
@@ -30,6 +31,8 @@ def import_all_drivers_and_their_data():
 
 
 if __name__ == '__main__':
-    delete_current_db()
-    import_all_drivers_and_their_data()
+    user = getpass.getuser()
+    if user is not 'ubuntu':
+        delete_current_db()
+        import_all_drivers_and_their_data()
 
