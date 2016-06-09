@@ -32,7 +32,8 @@ def import_all_drivers_and_their_data():
 
 if __name__ == '__main__':
     user = getpass.getuser()
-    if user is not 'ubuntu':
+    if user != 'ubuntu':
         delete_current_db()
         import_all_drivers_and_their_data()
+
 
