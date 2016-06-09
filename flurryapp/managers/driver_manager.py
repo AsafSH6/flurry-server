@@ -81,8 +81,8 @@ class DriverManager(models.Manager):
         :return: dict of driver name as key and list of features as value
         '''
         driver_name_to_list_of_features_dict = dict()
-        for driver in [self.get(id=79)]:
-        # for driver in self.all():
+        # for driver in [self.get(id=79)]:
+        for driver in self.all():
             if len(driver) is not 0:
                 driver_name_to_list_of_features_dict[driver.name] = list()
 
