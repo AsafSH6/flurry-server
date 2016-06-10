@@ -49,8 +49,7 @@ class DriverManager(models.Manager):
         driver.driving_data.save()
 
     def check_for_duplicate_rides(self):
-        all_drivers = self.all()
-        for driver in all_drivers:
+        for driver in self.all():
             print 'checking duplicate rides for driver:', driver.name
 
             num_of_rides = len(driver)
@@ -97,9 +96,9 @@ class DriverManager(models.Manager):
                     ride_as_vector.append(self.__calculate_average_drastic_speed_changes_per_minute(ride))
                     driver_name_to_list_of_features_dict[driver.name].append(ride_as_vector)
 
-        for driver in driver_name_to_list_of_features_dict:
-            print 'driver:', driver
-            print driver_name_to_list_of_features_dict[driver]
+        # for driver in driver_name_to_list_of_features_dict:
+        #     print 'driver:', driver
+        #     print driver_name_to_list_of_features_dict[driver]
 
         return driver_name_to_list_of_features_dict
 
@@ -108,7 +107,6 @@ class DriverManager(models.Manager):
     #     vals = [float(data_unit['throttle']) for data_unit in data]
     #     scaled = min_max_scaler.fit_transform(vals)
     #
-
 
     def __average_per_minute(self, data, keys=DEFAULT_VALUES_TO_CHECK):
         beginning_of_the_minute = int(data[0]['time'])
@@ -156,7 +154,6 @@ class DriverManager(models.Manager):
         avg_of_each_list_of_drastic_speed_change_per_minute = list_of_avg_for_each_list(l=list_of_lists_of_drastic_changes_per_minute)
         return float(sum(avg_of_each_list_of_drastic_speed_change_per_minute)) / len(avg_of_each_list_of_drastic_speed_change_per_minute)
 
-
     def __average_throttle_pressed_per_minitue(self, data):
         beginning_of_the_minute = int(data[0]['time'])
         list_of_presses_per_minute = [0]
@@ -176,7 +173,6 @@ class DriverManager(models.Manager):
 
         # print list_of_presses_per_minute
         return float(sum(list_of_presses_per_minute)) / len(list_of_presses_per_minute)
-
 
     def __append_maximum_limitation_of_speed(self, data_unit):
         data_unit['maximum_limition_of_speed'] = self.speed_limit_client.get_maximum_limitation_of_speed_in_kmph(
