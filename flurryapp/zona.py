@@ -1,26 +1,24 @@
 import django
+
 django.setup()
 
 from flurryapp.models import *
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
 
-Driver.objects.extract_features()
 
-# from sklearn import datasets
-# from sklearn.naive_bayes import GaussianNB
+def f():
+    Driver.objects.extract_features()
 
-# iris = datasets.load_iris()
 
-# gnb = GaussianNB()
-# y_pred = gnb.fit(iris.data, iris.target).predict(iris.data)
-# print("Number of mislabeled points out of a total %d points : %d" % (iris.data.shape[0],(iris.target != y_pred).sum()))
+def s():
+    mms = MinMaxScaler()
+    arr = np.array([0., 1., 2.])
+    print mms.fit_transform(arr.reshape(-1, 1)).reshape(len(arr))
+    # print mms.fit_transform(arr)#.reshape(1, -1)
 
-# print iris.data.shape
-# print iris.target
+# s()
 
-# print [5] * 3
+# print np.array([0, 1, 2]).reshape(1, -1np.array([0., 1., 2.]))
 
-# d = Driver.objects.all()[1]
-# for ride in d:
-#     print ride[-1]
-
-# print sum([])
+print map(lambda x: x, [1, 2, 3])

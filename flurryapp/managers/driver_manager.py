@@ -85,7 +85,7 @@ class DriverManager(models.Manager):
             if len(driver) is not 0:
                 driver_name_to_list_of_features_dict[driver.name] = list()
 
-                driver_driving_data = driver.driving_data.data
+                driver_driving_data = self.__preprocessor(driver.driving_data.data)
 
                 for ride in driver_driving_data:
                     # self.__preprocessor(ride)
@@ -102,11 +102,18 @@ class DriverManager(models.Manager):
 
         return driver_name_to_list_of_features_dict
 
-    # def __preprocessor(self, data):
-    #     min_max_scaler = MinMaxScaler()
-    #     vals = [float(data_unit['throttle']) for data_unit in data]
-    #     scaled = min_max_scaler.fit_transform(vals)
-    #
+    def __preprocessor(self, data):
+        min_max_scaler = MinMaxScaler()
+        thr_vals = np.array([float(data_unit['throttle']) for data_unit in data])
+        rpm_vals = np.array([float(data_unit['rpm']) for data_unit in data])
+        thr_scaled = min_max_scaler.fit_transform(np.reshape(thr_vals, (-1, 1))).reshape(thr_vals.size)
+        rpm_scaled = min_max_scaler.fit_transform(np.reshape(thr_vals, (-1, 1))).reshape(rpm_vals.size)
+        for index in xrange(len(rpm_vals)):
+            data[index]['throttle'] = thr_scaled[index]
+            data[index]['rpm'] = rpm_scaled[index]
+        return data
+
+
 
     def __average_per_minute(self, data, keys=DEFAULT_VALUES_TO_CHECK):
         beginning_of_the_minute = int(data[0]['time'])
