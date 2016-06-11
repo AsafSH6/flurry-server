@@ -1,4 +1,7 @@
 from __future__ import unicode_literals
+
+from time import sleep
+
 from django.db import models
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
@@ -14,6 +17,9 @@ MILLISECOND_TO_MINUTE = 60000
 DRASTIC_SPEED_THRESHOLD = 3
 DEFAULT_VALUES_TO_CHECK = ['speed', 'rpm']#, 'throttle', 'accelerator']
 VALUES_TO_SCALE = ['throttle', 'rpm']
+
+SLEEP_TIME = 0.3
+SLEEP = lambda: sleep(SLEEP_TIME)
 
 
 class DriverManager(models.Manager):
@@ -85,29 +91,40 @@ class DriverManager(models.Manager):
         :return: dict of driver name as key and list of features as value
         '''
         logging.debug('** EXTRACT FEATURES **\n\n')
+        SLEEP()
 
         driver_name_to_list_of_features_dict = dict()
-        for driver in [self.get(id=85)]:
-        # for driver in self.all():
+        # for driver in [self.get(id=85)]:
+        for driver in self.all():
             if len(driver) > 1 and driver.name != 'Test Driver':
                 logging.info('Extracting features for driver: ' + unicode(driver))
+                SLEEP()
+
                 driver_name_to_list_of_features_dict[driver.name] = list()
 
                 driver_driving_data = driver.driving_data.data
 
                 logging.info('Driver has ' + unicode(len(driver_driving_data) + 1) + ' rides')
+                SLEEP()
 
                 for ride_index, ride in enumerate(driver_driving_data):
-                    logging.debug('\nBuilding features vector for ride: ' + unicode(ride_index))
+                    logging.debug('\nBuilding features vector for ride: ' + unicode(ride_index + 1))
                     logging.info('Ride has ' + unicode(len(ride)) + ' data units')
+                    SLEEP()
 
                     ride = self.__preprocessor(ride)
+                    SLEEP()
                     ride_as_vector = []
                     ride_as_vector += self.__average_per_minute(ride)
+                    SLEEP()
                     ride_as_vector.append(self.__calculate_over_max_speed_precentage(ride))
+                    SLEEP()
                     ride_as_vector.append(self.__average_throttle_pressed_per_minitue(ride))
+                    SLEEP()
                     ride_as_vector.append(self.__calculate_average_drastic_speed_changes_per_minute(ride))
+                    SLEEP()
                     driver_name_to_list_of_features_dict[driver.name].append(ride_as_vector)
+                    SLEEP()
 
         return driver_name_to_list_of_features_dict
 
@@ -143,7 +160,6 @@ class DriverManager(models.Manager):
                 else:
                     value_to_offset[value] += 1
 
-
         return data
 
     def __average_per_minute(self, data, keys=DEFAULT_VALUES_TO_CHECK):
@@ -176,10 +192,17 @@ class DriverManager(models.Manager):
         return dict_of_key_to_list_of_lists_of_values_per_minute.values()
 
     def __calculate_over_max_speed_precentage(self, data, minimum_speed=0):
+        logging.debug('\n~ Over Maximum Speed Limitation Precentage ~')
+
         a = [float(data_unit['speed']) > float(data_unit['maximum_limition_of_speed']) for data_unit in data if float(data_unit['speed']) > minimum_speed]
-        return float(sum(a)) / len(a) if len(a) > 0 else 0
+        over_max_speed = float(sum(a)) / len(a) if len(a) > 0 else 0
+        logging.debug('Driver had passed the maximum limitation ' + unicode(over_max_speed * 100) + '% of the time')
+        return over_max_speed
 
     def __calculate_average_drastic_speed_changes_per_minute(self, data, threshold=DRASTIC_SPEED_THRESHOLD):
+        logging.debug('Calculate Average Drastic Speed Change')
+        logging.info('Threshold = ' + unicode(threshold))
+
         beginning_of_the_minute = int(data[0]['time'])
         list_of_lists_of_drastic_changes_per_minute = [[]]
 
@@ -198,11 +221,20 @@ class DriverManager(models.Manager):
             last_speed = current_speed
         avg = lambda l: float(sum(l)) / len(l) if len(l) > 0 else 0
         list_of_avg_for_each_list = lambda l: [avg(sublist) for sublist in l]
+
         avg_of_each_list_of_drastic_speed_change_per_minute = list_of_avg_for_each_list(l=list_of_lists_of_drastic_changes_per_minute)
 
-        return avg(avg_of_each_list_of_drastic_speed_change_per_minute)
+        logging.debug('values per minute of: drastic speed change: ' + unicode(avg_of_each_list_of_drastic_speed_change_per_minute))
+
+        avg_drastic_change = avg(avg_of_each_list_of_drastic_speed_change_per_minute)
+
+        logging.debug('average per minute: ' + unicode(avg_drastic_change))
+
+        return avg_drastic_change
 
     def __average_throttle_pressed_per_minitue(self, data):
+        logging.debug('\n~ Average Throttle Presses Per Minute ~')
+
         beginning_of_the_minute = int(data[0]['time'])
         list_of_presses_per_minute = [0]
 
@@ -219,6 +251,7 @@ class DriverManager(models.Manager):
 
             speed_before_was_zero = data[data_unit_index]['speed'] == '0'
 
+        logging.debug('values per minute of throttle presses: ' + unicode(list_of_presses_per_minute))
         # print list_of_presses_per_minute
         return float(sum(list_of_presses_per_minute)) / len(list_of_presses_per_minute)
 
