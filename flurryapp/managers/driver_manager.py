@@ -2,13 +2,18 @@ from __future__ import unicode_literals
 from django.db import models
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
+import logging
 
 from flurryapp.utils.maximum_limitation_of_speed import MaximumLimitationOfSpeedAPIClient
+
+logging.basicConfig(filename='test.log', level=logging.DEBUG)
+logging.getLogger().addHandler(logging.StreamHandler())
 
 
 MILLISECOND_TO_MINUTE = 60000
 DRASTIC_SPEED_THRESHOLD = 3
 DEFAULT_VALUES_TO_CHECK = ['speed', 'rpm']#, 'throttle', 'accelerator']
+VALUES_TO_SCALE = ['throttle', 'rpm']
 
 
 class DriverManager(models.Manager):
@@ -76,19 +81,27 @@ class DriverManager(models.Manager):
 
     def extract_features(self):
         '''
-        extracting features of every driver in the DB
+        extracting features of every driver in DB
         :return: dict of driver name as key and list of features as value
         '''
+        logging.debug('** EXTRACT FEATURES **\n\n')
+
         driver_name_to_list_of_features_dict = dict()
-        # for driver in [self.get(id=79)]:
-        for driver in self.all():
-            if len(driver) is not 0:
+        for driver in [self.get(id=85)]:
+        # for driver in self.all():
+            if len(driver) > 1 and driver.name != 'Test Driver':
+                logging.info('Extracting features for driver: ' + unicode(driver))
                 driver_name_to_list_of_features_dict[driver.name] = list()
 
-                driver_driving_data = self.__preprocessor(driver.driving_data.data)
+                driver_driving_data = driver.driving_data.data
 
-                for ride in driver_driving_data:
-                    # self.__preprocessor(ride)
+                logging.info('Driver has ' + unicode(len(driver_driving_data) + 1) + ' rides')
+
+                for ride_index, ride in enumerate(driver_driving_data):
+                    logging.debug('\nBuilding features vector for ride: ' + unicode(ride_index))
+                    logging.info('Ride has ' + unicode(len(ride)) + ' data units')
+
+                    ride = self.__preprocessor(ride)
                     ride_as_vector = []
                     ride_as_vector += self.__average_per_minute(ride)
                     ride_as_vector.append(self.__calculate_over_max_speed_precentage(ride))
@@ -96,26 +109,46 @@ class DriverManager(models.Manager):
                     ride_as_vector.append(self.__calculate_average_drastic_speed_changes_per_minute(ride))
                     driver_name_to_list_of_features_dict[driver.name].append(ride_as_vector)
 
-        # for driver in driver_name_to_list_of_features_dict:
-        #     print 'driver:', driver
-        #     print driver_name_to_list_of_features_dict[driver]
-
         return driver_name_to_list_of_features_dict
 
     def __preprocessor(self, data):
+        logging.debug('\n~ Running Preprocessor ~')
+
         min_max_scaler = MinMaxScaler()
-        thr_vals = np.array([float(data_unit['throttle']) for data_unit in data])
-        rpm_vals = np.array([float(data_unit['rpm']) for data_unit in data])
-        thr_scaled = min_max_scaler.fit_transform(np.reshape(thr_vals, (-1, 1))).reshape(thr_vals.size)
-        rpm_scaled = min_max_scaler.fit_transform(np.reshape(thr_vals, (-1, 1))).reshape(rpm_vals.size)
-        for index in xrange(len(rpm_vals)):
-            data[index]['throttle'] = thr_scaled[index]
-            data[index]['rpm'] = rpm_scaled[index]
+        dict_of_scaled_values = dict()
+
+        for value in VALUES_TO_SCALE:
+            logging.debug('Scaling ' + unicode(value).upper())
+            values_iterable = (data_unit[value] for data_unit in data if data_unit[value] != '-1')
+
+            # values_iterable = (data_unit[value] for data_unit in data)
+
+            values_arr = np.fromiter(values_iterable, np.float)
+
+            values_scaled = min_max_scaler.fit_transform(np.reshape(values_arr, (-1, 1))).reshape(values_arr.size)
+
+            logging.debug('Minimum value: ' + unicode(min_max_scaler.data_min_[0]) + ', Maximum value: ' + unicode(min_max_scaler.data_max_[0]))
+
+            dict_of_scaled_values[value] = values_scaled
+
+        # offset for skipped values since value == -1
+        value_to_offset = {value: 0 for value in VALUES_TO_SCALE}
+
+        for index in xrange(values_scaled.size):
+            for value, values_scaled in dict_of_scaled_values.iteritems():
+                offset = value_to_offset[value]
+                if data[index + offset][value] != '-1':  # skip this data unit
+                    data[index + offset][value] = values_scaled[index]
+
+                else:
+                    value_to_offset[value] += 1
+
+
         return data
 
-
-
     def __average_per_minute(self, data, keys=DEFAULT_VALUES_TO_CHECK):
+        logging.debug('\n~ Average ' + ', '.join(keys).upper() + ' Per Minute ~')
+
         beginning_of_the_minute = int(data[0]['time'])
         dict_of_key_to_list_of_lists_of_values_per_minute = {key: [[]] for key in keys}
 
@@ -130,8 +163,14 @@ class DriverManager(models.Manager):
 
         for key in keys:
             list_of_lists_of_values_per_minute = dict_of_key_to_list_of_lists_of_values_per_minute[key]
-            average_of_values_per_minute = sum(sum(values_per_minute) / len(values_per_minute) for values_per_minute in list_of_lists_of_values_per_minute)
+
+            logging.debug('values per minute of: ' + key.upper() + ' ' + unicode(list_of_lists_of_values_per_minute))
+
+            avg = lambda l: float(sum(l)) / len(l) if len(l) > 0 else 0
+            average_of_values_per_minute = sum(avg(values_per_minute) for values_per_minute in list_of_lists_of_values_per_minute)
             dict_of_key_to_list_of_lists_of_values_per_minute[key] = average_of_values_per_minute / len(list_of_lists_of_values_per_minute)
+
+            logging.debug('average per minute: ' + unicode(dict_of_key_to_list_of_lists_of_values_per_minute[key]))
 
         # print dict_of_key_to_list_of_lists_of_values_per_minute
         return dict_of_key_to_list_of_lists_of_values_per_minute.values()
@@ -152,14 +191,16 @@ class DriverManager(models.Manager):
 
             current_speed = int(data_unit['speed'])
             if threshold < abs(current_speed - last_speed):
-                change_to_calculate = current_speed - threshold - last_speed if current_speed > last_speed else last_speed - threshold - current_speed
+                # change_to_calculate = current_speed - threshold - last_speed if current_speed > last_speed else last_speed - threshold - current_speed
                 change_to_calculate = 1
                 list_of_lists_of_drastic_changes_per_minute[-1].append(change_to_calculate)  # the drastic change itself
 
             last_speed = current_speed
-        list_of_avg_for_each_list = lambda l: [float(sum(sublist)) / len(sublist) if len(sublist) > 0 else 0 for sublist in l]
+        avg = lambda l: float(sum(l)) / len(l) if len(l) > 0 else 0
+        list_of_avg_for_each_list = lambda l: [avg(sublist) for sublist in l]
         avg_of_each_list_of_drastic_speed_change_per_minute = list_of_avg_for_each_list(l=list_of_lists_of_drastic_changes_per_minute)
-        return float(sum(avg_of_each_list_of_drastic_speed_change_per_minute)) / len(avg_of_each_list_of_drastic_speed_change_per_minute)
+
+        return avg(avg_of_each_list_of_drastic_speed_change_per_minute)
 
     def __average_throttle_pressed_per_minitue(self, data):
         beginning_of_the_minute = int(data[0]['time'])
@@ -187,3 +228,8 @@ class DriverManager(models.Manager):
             lon=data_unit['gps']['lon']
         )
 
+    def get_good_driver_vectors(self):
+        return [[0.5, 60, 0.2, 10, 0.15], [0.3, 30, 0.1, 8, 0.1]]
+
+    def get_bad_driver_vectors(self):
+        return [[0.6, 80, 0.35, 14, 0.23], [0.4, 45, 0.2, 12, 0.25]]

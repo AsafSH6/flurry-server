@@ -38,7 +38,8 @@ class DataDriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
         return Response(data, status=status.HTTP_200_OK)
 
     @detail_route(methods=['GET'])
-    def num_of_rides(self, request, *args, **kwargs):
+    def len(self, request, *args, **kwargs):
         driving_data = self.get_object()
-        return Response({'number of rides': len(driving_data)}, status=status.HTTP_200_OK)
+        return Response({'number of rides': len(driving_data),
+                         'number of data units': sum(len(ride) for ride in driving_data)}, status=status.HTTP_200_OK)
 

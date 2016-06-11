@@ -1,3 +1,5 @@
+/test.log
+/flurryapp/test.log
 flurryenv/
 *.pyc
 *.org

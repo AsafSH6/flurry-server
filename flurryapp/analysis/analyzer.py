@@ -8,12 +8,17 @@ from sklearn.ensemble import AdaBoostClassifier
 
 
 class Analyzer(object):
-    def __init__(self, dict_of_target_and_its_features_vectors, training_group_size_in_percentage=50):
+    def __init__(self, dict_of_target_and_its_features_vectors, training_group_size_in_percentage=40):
         self.dict_of_target_and_its_features_vectors = dict_of_target_and_its_features_vectors
         self.training_data_sets, self.training_targets,\
         self.testing_data_sets, self.test_targets = self.__get_training_group_and_testing_group(training_group_size_in_percentage)
+        print self.training_targets
 
-    def learn(self):
+        print 'num of training sets:', len(self.training_targets)
+        print 'num of testing sets:', len(self.test_targets)
+        print 'number of valid rides', sum(len(driver) for driver in Driver.objects.all() if len(driver) > 1 and driver.name != 'Test Driver')
+
+    def learn1(self):
         # slice_index = float(len(self.data)) / 100 * training_group_size_in_percentage
 
         print 'GAUSSIAN BN'
@@ -65,7 +70,7 @@ class Analyzer(object):
 
         print '\n'
 
-        print 'ADA BOOST'
+        print 'REAL ADA BOOST'
         bdt_real = AdaBoostClassifier(
             tree.DecisionTreeClassifier(max_depth=2),
             n_estimators=600,
@@ -80,9 +85,29 @@ class Analyzer(object):
 
         print '\n'
 
+        print 'DISCERT ADA BOOST'
+        bdt_discrete = AdaBoostClassifier(
+                    tree.DecisionTreeClassifier(max_depth=2),
+                    n_estimators=600,
+                    learning_rate=1.5,
+                    algorithm="SAMME")
+        bdt_discrete = bdt_discrete.fit(self.training_data_sets, self.training_targets)
+
+        y_pred = bdt_discrete.predict(self.testing_data_sets)
+
+        print("Number of mislabeled points out of a total %d points : %d" % (
+            len(self.testing_data_sets), (self.test_targets != y_pred).sum()))
+        print 'success:', 100 - (((self.test_targets != y_pred).sum() / float(len(self.testing_data_sets))) * 100), '%'
+
+        print '\n'
+
 
         # for i in xrange(len(y_pred)):
         #     print 'pred:', y_pred[i], 'real:', self.target[i], y_pred[i] == self.target[i]
+
+    def learn(self):
+        pass
+
 
     def __build_data_set(self):
         data, targets = list(), list()
@@ -114,5 +139,5 @@ class Analyzer(object):
 
 
 if __name__ == '__main__':
-    Analyzer(Driver.objects.extract_features()).learn()
+    Analyzer(Driver.objects.extract_features()).learn1()
     # pchange_to_calculaterint Analyzer(Driver.objects.extract_features()).learn()
