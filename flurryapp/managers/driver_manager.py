@@ -18,8 +18,10 @@ DRASTIC_SPEED_THRESHOLD = 3
 DEFAULT_VALUES_TO_CHECK = ['speed', 'rpm']#, 'throttle', 'accelerator']
 VALUES_TO_SCALE = ['throttle', 'rpm']
 
-SLEEP_TIME = 0.3
-SLEEP = lambda: sleep(SLEEP_TIME)
+SLEEP_TIME = 0
+
+
+def SLEEP(time=SLEEP_TIME): sleep(time)
 
 
 class DriverManager(models.Manager):
