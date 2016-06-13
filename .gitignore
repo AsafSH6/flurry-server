@@ -6,3 +6,4 @@ flurryenv/
 .idea
 *.swp
 *.swo
+*.log

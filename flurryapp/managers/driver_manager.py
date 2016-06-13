@@ -10,7 +10,6 @@ import logging
 from flurryapp.utils.maximum_limitation_of_speed import MaximumLimitationOfSpeedAPIClient
 
 logging.basicConfig(filename='test.log', level=logging.DEBUG)
-logging.getLogger().addHandler(logging.StreamHandler())
 
 
 MILLISECOND_TO_MINUTE = 60000
@@ -21,7 +20,7 @@ VALUES_TO_SCALE = ['throttle', 'rpm']
 SLEEP_TIME = 0
 
 
-def SLEEP(time=SLEEP_TIME): sleep(time)
+def SLEEP(): sleep(SLEEP_TIME)
 
 
 class DriverManager(models.Manager):
@@ -87,11 +86,16 @@ class DriverManager(models.Manager):
 
             print '\n'
 
-    def extract_features(self):
+    def extract_features(self, debug=False):
         '''
         extracting features of every driver in DB
         :return: dict of driver name as key and list of features as value
         '''
+        if debug is True:
+            global SLEEP_TIME
+            SLEEP_TIME = 0.2
+            logging.getLogger().addHandler(logging.StreamHandler())
+
         logging.debug('** EXTRACT FEATURES **\n\n')
         SLEEP()
 
@@ -153,16 +157,15 @@ class DriverManager(models.Manager):
         # offset for skipped values since value == -1
         value_to_offset = {value: 0 for value in VALUES_TO_SCALE}
 
-        for index in xrange(values_scaled.size):
-            for value, values_scaled in dict_of_scaled_values.iteritems():
+        for value, values_scaled in dict_of_scaled_values.iteritems():
+            for index in xrange(values_scaled.size):
                 offset = value_to_offset[value]
                 if data[index + offset][value] != '-1':  # skip this data unit
                     data[index + offset][value] = values_scaled[index]
-
                 else:
                     value_to_offset[value] += 1
 
-        return data
+            return data
 
     def __average_per_minute(self, data, keys=DEFAULT_VALUES_TO_CHECK):
         logging.debug('\n~ Average ' + ', '.join(keys).upper() + ' Per Minute ~')
@@ -264,7 +267,63 @@ class DriverManager(models.Manager):
         )
 
     def get_good_driver_vectors(self):
-        return [[0.5, 60, 0.2, 10, 0.15], [0.3, 30, 0.1, 8, 0.1]]
+        '''
+        1. avg RPM per minute
+        2. avg SPEED per minute
+        3. passed the maximum speed limitation
+        4. average number of throttle pressed per minute
+        5. drastic speed change
+        :return:
+        '''
+        return [[
+            0.41610997208763645,
+            46.696654507213495,
+            0.08744588744588745,
+            7.938775510204081,
+            0.36300309597523217
+        ], [
+            0.6211435331742237,
+            77.09770810670811,
+            0.2967884828349945,
+            15.16,
+            0.09935897435897435
+        ],  [
+            0.3046915386501108,
+            31.946411858886496,
+            0.022026431718061675,
+            9.620689655172415,
+            0.22119815668202766
+        ], [
+            0.4430503815453953,
+            52.2821892278414,
+            0.11439842209072978,
+            6.954545454545454,
+            0.2522202486678508
+        ]]
 
     def get_bad_driver_vectors(self):
-        return [[0.6, 80, 0.35, 14, 0.23], [0.4, 45, 0.2, 12, 0.25]]
+        return [[
+            0.6948284640105129,
+            90.7732378936423,
+            0.4959584295612009,
+            13.384615384615385,
+            0.07625145518044238
+        ], [
+            0.6284716553882908,
+            79.42608187660095,
+            0.4105409153952843,
+            13.147058823529411,
+            0.08595480726628267
+        ], [
+            0.5163502709291515,
+            70.32073011734029,
+            0.7903225806451613,
+            21.5,
+            0.08333333333333333
+        ], [
+            0.5396535838554453,
+            66.84547794204546,
+            0.5338208409506399,
+            10.0,
+            0.13380281690140844
+        ],]

@@ -1,143 +1,84 @@
+from __future__ import unicode_literals
 import django
 django.setup()
 from flurryapp.models import Driver
+import logging
+from time import sleep
 
 from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
-from sklearn import svm, tree
-from sklearn.ensemble import AdaBoostClassifier
+# from sklearn import svm, tree
+# from sklearn.ensemble import AdaBoostClassifier
+
+logging.basicConfig(filename='test.log', level=logging.DEBUG)
+
+SLEEP_TIME = 0.2
+
+
+def SLEEP(): sleep(SLEEP_TIME)
 
 
 class Analyzer(object):
-    def __init__(self, dict_of_target_and_its_features_vectors, training_group_size_in_percentage=40):
+    def __init__(self, dict_of_target_and_its_features_vectors):
+        logging.debug('\n\n** ANALYSIS **\n\n')
         self.dict_of_target_and_its_features_vectors = dict_of_target_and_its_features_vectors
-        self.training_data_sets, self.training_targets,\
-        self.testing_data_sets, self.test_targets = self.__get_training_group_and_testing_group(training_group_size_in_percentage)
-        print self.training_targets
+        self.training_data_set, self.training_targets = self.__get_training_data()
+        self.algorithm = GaussianNB()
+        logging.debug('Using Gaussian Naive Bayes')
+        SLEEP()
+        self.__fit()
 
-        print 'num of training sets:', len(self.training_targets)
-        print 'num of testing sets:', len(self.test_targets)
-        print 'number of valid rides', sum(len(driver) for driver in Driver.objects.all() if len(driver) > 1 and driver.name != 'Test Driver')
+    def __fit(self):
+        logging.debug('~ Fitting ~')
+        self.algorithm.fit(self.training_data_set, self.training_targets)
+        SLEEP()
 
-    def learn1(self):
-        # slice_index = float(len(self.data)) / 100 * training_group_size_in_percentage
+    def classify(self):
+        logging.debug('\n** CLASSIFY DATA **\n')
 
-        print 'GAUSSIAN BN'
-        gnb = GaussianNB()
-        y_pred = gnb.fit(self.training_data_sets, self.training_targets).predict(self.testing_data_sets)
+        data_set, targets = self.__get_data()
+        logging.debug('Number of data sets: {num_data_sets}'.format(num_data_sets=len(data_set)))
+        SLEEP()
 
-        print("Number of mislabeled points out of a total %d points : %d" % (len(self.testing_data_sets), (self.test_targets != y_pred).sum()))
-        print 'success:', 100 - (((self.test_targets != y_pred).sum() / float(len(self.testing_data_sets))) * 100), '%'
+        predictions = self.algorithm.predict(data_set)
 
-        print '\n'
+        for prediction, target in zip(predictions, targets):
+            logging.debug('Target {target} classified as: {prediction}'.format(target=target,
+                                                                               prediction=prediction))
+            SLEEP()
 
-        print 'BERNOULLI BN'
-        bnb = BernoulliNB()
-        y_pred = bnb.fit(self.training_data_sets, self.training_targets).predict(self.testing_data_sets)
+        logging.debug('\n')
 
-        print("Number of mislabeled points out of a total %d points : %d" % (len(self.testing_data_sets), (self.test_targets != y_pred).sum()))
-        print 'success:', 100 - (((self.test_targets != y_pred).sum() / float(len(self.testing_data_sets))) * 100), '%'
+        for target in self.dict_of_target_and_its_features_vectors.keys():
+            num_of_vectors = len(self.dict_of_target_and_its_features_vectors[target])
 
-        print '\n'
+            f = lambda target_and_classification: target_and_classification[0] == target and target_and_classification[1] == 'Good'
+            vectors_classified_as_good = filter(f, zip(targets, predictions))
 
-        print 'MULTINOMIAL NB'
-        mnb = MultinomialNB()
-        y_pred = mnb.fit(self.training_data_sets, self.training_targets).predict(self.testing_data_sets)
+            logging.debug(target + ' has ' + unicode(num_of_vectors) + ' vectors and classified as good ' + unicode(len(vectors_classified_as_good)) + ' times')
 
-        print("Number of mislabeled points out of a total %d points : %d" % (len(self.testing_data_sets), (self.test_targets != y_pred).sum()))
-        print 'success:', 100 - (((self.test_targets != y_pred).sum() / float(len(self.testing_data_sets))) * 100), '%'
+            percentage = (float(len(vectors_classified_as_good)) / num_of_vectors) * 100
 
-        print '\n'
+            logging.debug('Target {target} classified as Good Driver {percentage} % of the time\n'.format(target=target,
+                                                                                                          percentage=percentage))
+            SLEEP()
 
-        print 'SVM'
-        s = svm.SVC()
-        s.fit(self.training_data_sets, self.training_targets)
+    def __get_data(self):
+        data_set, targets = list(), list()
+        for target, features in self.dict_of_target_and_its_features_vectors.iteritems():
+            data_set += features
+            targets += [target] * len(features)
 
-        y_pred = s.predict(self.testing_data_sets)
+        return data_set, targets
 
-        print("Number of mislabeled points out of a total %d points : %d" % (len(self.testing_data_sets), (self.test_targets != y_pred).sum()))
-        print 'success:', 100 - (((self.test_targets != y_pred).sum() / float(len(self.testing_data_sets))) * 100), '%'
+    def __get_training_data(self):
+        good_driver = Driver.objects.get_good_driver_vectors()
+        bad_driver = Driver.objects.get_bad_driver_vectors()
 
-        print '\n'
+        training_data_set = good_driver + bad_driver
+        training_targets = ['Good'] * len(good_driver) + ['Bad'] * len(bad_driver)
 
-        print 'DECISION TREE'
-        t = tree.DecisionTreeClassifier(max_depth=2)
-        t = t.fit(self.training_data_sets, self.training_targets)
-
-        y_pred = t.predict(self.testing_data_sets)
-
-        print("Number of mislabeled points out of a total %d points : %d" % (len(self.testing_data_sets), (self.test_targets != y_pred).sum()))
-        print 'success:', 100 - (((self.test_targets != y_pred).sum() / float(len(self.testing_data_sets))) * 100), '%'
-
-        print '\n'
-
-        print 'REAL ADA BOOST'
-        bdt_real = AdaBoostClassifier(
-            tree.DecisionTreeClassifier(max_depth=2),
-            n_estimators=600,
-            learning_rate=1)
-        bdt_real = bdt_real.fit(self.training_data_sets, self.training_targets)
-
-        y_pred = bdt_real.predict(self.testing_data_sets)
-
-        print("Number of mislabeled points out of a total %d points : %d" % (
-        len(self.testing_data_sets), (self.test_targets != y_pred).sum()))
-        print 'success:', 100 - (((self.test_targets != y_pred).sum() / float(len(self.testing_data_sets))) * 100), '%'
-
-        print '\n'
-
-        print 'DISCERT ADA BOOST'
-        bdt_discrete = AdaBoostClassifier(
-                    tree.DecisionTreeClassifier(max_depth=2),
-                    n_estimators=600,
-                    learning_rate=1.5,
-                    algorithm="SAMME")
-        bdt_discrete = bdt_discrete.fit(self.training_data_sets, self.training_targets)
-
-        y_pred = bdt_discrete.predict(self.testing_data_sets)
-
-        print("Number of mislabeled points out of a total %d points : %d" % (
-            len(self.testing_data_sets), (self.test_targets != y_pred).sum()))
-        print 'success:', 100 - (((self.test_targets != y_pred).sum() / float(len(self.testing_data_sets))) * 100), '%'
-
-        print '\n'
-
-
-        # for i in xrange(len(y_pred)):
-        #     print 'pred:', y_pred[i], 'real:', self.target[i], y_pred[i] == self.target[i]
-
-    def learn(self):
-        pass
-
-
-    def __build_data_set(self):
-        data, targets = list(), list()
-        for target, features_vectors in self.dict_of_target_and_its_features_vectors.iteritems():
-            data += features_vectors
-            targets += [target] * len(features_vectors)
-
-        return data, targets
-
-    def __get_training_group_and_testing_group(self, training_group_size_in_percentage):
-        training_data_set, training_targets = list(), list()
-        testing_data_set, testing_targets = list(), list()
-        for target, features_vector in self.dict_of_target_and_its_features_vectors.iteritems():
-            number_of_vectors = len(features_vector)
-            slice_index = int(float(number_of_vectors) * (float(training_group_size_in_percentage) / 100))
-            training_data_set += features_vector[:slice_index]
-            training_targets += [target] * slice_index
-
-            testing_data_set += features_vector[slice_index:]
-            testing_targets += [target] * (number_of_vectors - slice_index)
-
-        return training_data_set, training_targets, testing_data_set, testing_targets
-
-
-
-
-
-
+        return training_data_set, training_targets
 
 
 if __name__ == '__main__':
-    Analyzer(Driver.objects.extract_features()).learn1()
-    # pchange_to_calculaterint Analyzer(Driver.objects.extract_features()).learn()
+    Analyzer(Driver.objects.extract_features(debug=True)).classify()
