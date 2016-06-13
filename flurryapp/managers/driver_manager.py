@@ -93,7 +93,7 @@ class DriverManager(models.Manager):
         '''
         if debug is True:
             global SLEEP_TIME
-            SLEEP_TIME = 0
+            SLEEP_TIME = 0.2
             logging.getLogger().addHandler(logging.StreamHandler())
 
         logging.debug('** EXTRACT FEATURES **\n\n')
