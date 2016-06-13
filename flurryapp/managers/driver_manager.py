@@ -20,7 +20,7 @@ VALUES_TO_SCALE = ['throttle', 'rpm']
 SLEEP_TIME = 0
 
 
-def SLEEP(): sleep(SLEEP_TIME)
+def SLEEP(time=None): sleep(SLEEP_TIME) if time is None else sleep(time)
 
 
 class DriverManager(models.Manager):
@@ -93,7 +93,7 @@ class DriverManager(models.Manager):
         '''
         if debug is True:
             global SLEEP_TIME
-            SLEEP_TIME = 0.2
+            SLEEP_TIME = 0
             logging.getLogger().addHandler(logging.StreamHandler())
 
         logging.debug('** EXTRACT FEATURES **\n\n')
@@ -101,6 +101,8 @@ class DriverManager(models.Manager):
 
         driver_name_to_list_of_features_dict = dict()
         # for driver in [self.get(id=85)]:
+        num_of_total_rides_counter = 0
+        num_of_total_data_units_counter = 0
         for driver in self.all():
             if len(driver) > 1 and driver.name != 'Test Driver':
                 logging.info('Extracting features for driver: ' + unicode(driver))
@@ -109,13 +111,16 @@ class DriverManager(models.Manager):
                 driver_name_to_list_of_features_dict[driver.name] = list()
 
                 driver_driving_data = driver.driving_data.data
-
-                logging.info('Driver has ' + unicode(len(driver_driving_data) + 1) + ' rides')
+                num_of_rides = len(driver_driving_data)
+                num_of_total_rides_counter += num_of_rides
+                logging.info('Driver has ' + unicode(num_of_rides + 1) + ' rides')
                 SLEEP()
 
                 for ride_index, ride in enumerate(driver_driving_data):
                     logging.debug('\nBuilding features vector for ride: ' + unicode(ride_index + 1))
-                    logging.info('Ride has ' + unicode(len(ride)) + ' data units')
+                    num_of_data_units = len(ride)
+                    logging.info('Ride has ' + unicode(num_of_data_units) + ' data units')
+                    num_of_total_data_units_counter += num_of_data_units
                     SLEEP()
 
                     ride = self.__preprocessor(ride)
@@ -132,6 +137,22 @@ class DriverManager(models.Manager):
                     driver_name_to_list_of_features_dict[driver.name].append(ride_as_vector)
                     SLEEP()
 
+        total_num_of_rides_line = 'Total number of rides: %s' % '{:,}'.format(num_of_total_rides_counter)
+        total_num_of_data_units_line = 'Total number of data units: %s' % '{:,}'.format(num_of_total_data_units_counter)
+        longest_line_len = max(len(total_num_of_rides_line), len(total_num_of_data_units_line))
+        number_of_marks = (longest_line_len + 8)
+        logging.info('''
+                    {top_line}
+                    ==  {total_num_of_rides_line}{num_of_spaces_for_rides}  ==
+                    ==  {total_num_of_data_units_line}{num_of_spaces_for_data_units}  ==
+                    {bottom_line}
+                     '''.format(top_line='=' * number_of_marks,
+                                bottom_line='=' * number_of_marks,
+                                total_num_of_rides_line=total_num_of_rides_line,
+                                total_num_of_data_units_line=total_num_of_data_units_line,
+                                num_of_spaces_for_rides=' ' * (number_of_marks - 8 - len(total_num_of_rides_line)),
+                                num_of_spaces_for_data_units=' ' * (number_of_marks - len(total_num_of_data_units_line) - 8)))
+        SLEEP(5)
         return driver_name_to_list_of_features_dict
 
     def __preprocessor(self, data):

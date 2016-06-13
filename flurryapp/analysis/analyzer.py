@@ -9,8 +9,6 @@ from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
 # from sklearn import svm, tree
 # from sklearn.ensemble import AdaBoostClassifier
 
-logging.basicConfig(filename='test.log', level=logging.DEBUG)
-
 SLEEP_TIME = 0.2
 
 
@@ -19,11 +17,11 @@ def SLEEP(): sleep(SLEEP_TIME)
 
 class Analyzer(object):
     def __init__(self, dict_of_target_and_its_features_vectors):
-        logging.debug('\n\n** ANALYSIS **\n\n')
+        logging.debug('\n\n** ANALYSIS **\n')
         self.dict_of_target_and_its_features_vectors = dict_of_target_and_its_features_vectors
         self.training_data_set, self.training_targets = self.__get_training_data()
         self.algorithm = GaussianNB()
-        logging.debug('Using Gaussian Naive Bayes')
+        logging.debug('Using Gaussian Naive Bayes\n\n')
         SLEEP()
         self.__fit()
 
