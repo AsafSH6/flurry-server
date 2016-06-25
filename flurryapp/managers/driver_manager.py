@@ -27,6 +27,7 @@ class DriverManager(models.Manager):
     def __init__(self):
         super(DriverManager, self).__init__()
         self.speed_limit_client = MaximumLimitationOfSpeedAPIClient()
+        self.prints_handler = logging.StreamHandler()
 
     def append_new_driving_data(self, driver_id, driving_data):
         '''
@@ -93,8 +94,10 @@ class DriverManager(models.Manager):
         '''
         if debug is True:
             global SLEEP_TIME
-            SLEEP_TIME = 0.2
-            logging.getLogger().addHandler(logging.StreamHandler())
+            SLEEP_TIME = 0
+            logging.getLogger().addHandler(self.prints_handler)
+        # else:
+        #     logging.getLogger().removeHandler(self.prints_handler)
 
         logging.debug('** EXTRACT FEATURES **\n\n')
         SLEEP()
@@ -348,3 +351,21 @@ class DriverManager(models.Manager):
             10.0,
             0.13380281690140844
         ],]
+
+    def good_and_bad_driver_vectors(self):
+        all_drivers_feature_vectors = self.extract_features().values()
+        # [[[1, 2, 3], [1, 2, 3]], [[5, 6, 7], [5, 6, 7]]]
+        list_of_vectors_per_feature = [[] for i in xrange(5)]
+        for driver in all_drivers_feature_vectors:
+            for ride_features in driver:
+                for index, feature_value in enumerate(ride_features):
+                    list_of_vectors_per_feature[index].append(feature_value)
+
+        median_index = ((len(list_of_vectors_per_feature[0]) + 1) / 3)
+        print median_index
+        top_10_percent_index = ((len(list_of_vectors_per_feature[0]) + 1) / 10) * 8
+        print top_10_percent_index
+        good_driver = [[list_of_vectors_per_feature[feature_index][index] for feature_index in range(5)] for index in range(median_index - 1, median_index + 2)]
+        bad_driver = [[list_of_vectors_per_feature[feature_index][index] for feature_index in range(5)] for index in range(top_10_percent_index - 1, top_10_percent_index + 2)]
+        return good_driver, bad_driver
+

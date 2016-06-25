@@ -69,9 +69,11 @@ class Analyzer(object):
         return data_set, targets
 
     def __get_training_data(self):
-        good_driver = Driver.objects.get_good_driver_vectors()
-        bad_driver = Driver.objects.get_bad_driver_vectors()
-
+        # good_driver = Driver.objects.get_good_driver_vectors()
+        # bad_driver = Driver.objects.get_bad_driver_vectors()
+        good_driver, bad_driver = Driver.objects.good_and_bad_driver_vectors()
+        print good_driver
+        print bad_driver
         training_data_set = good_driver + bad_driver
         training_targets = ['Good'] * len(good_driver) + ['Bad'] * len(bad_driver)
 
