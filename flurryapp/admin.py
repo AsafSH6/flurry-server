@@ -5,5 +5,3 @@ from flurryapp.models import *
 
 admin.site.register(DataDriver)
 admin.site.register(Driver)
-admin.site.register(Car)
-admin.site.register(Profile)
