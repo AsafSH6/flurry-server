@@ -1,9 +1,10 @@
 from __future__ import unicode_literals
 import requests as req
+import os
 
 
-API_APP_ID = 'CYfTUgmUWqfylJcctLRO'
-API_APP_CODE = 'MW3akKCzl263Qtt7qHgIUQ'
+API_APP_ID = os.environ.get('HERE_API_APP_ID', 'CYfTUgmUWqfylJcctLRO')
+API_APP_CODE = os.environ.get('HERE_API_APP_CODE', 'MW3akKCzl263Qtt7qHgIUQ')
 
 
 MAX_SPEED_API_URL = r'http://route.st.nlp.nokia.com/routing/6.2/getlinkinfo.json?' \
