@@ -2,9 +2,11 @@ Django==1.9.4
 django-model-utils==2.4
 djangorestframework==3.3.2
 drf-extensions==0.2.8
-obd==0.4.1
 psycopg2==2.6.1
-pyserial==3.0.1
-numpy==1.9.2
-scikit-learn==0.17.1
 requests==2.9.1
+cling==2.3.2
+dj-database-url==0.4.1
+dj-static==0.0.6
+gunicorn==19.4.5
+static3==0.6.1
+whitenoise==3.0
