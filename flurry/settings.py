@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'ub491*rzo*5h1cw0ay8ywslt)zqgkn#-%*@ef
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ.get('DEBUG', True) in ('True', True) else False
 
-ALLOWED_HOSTS = ['flurry.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 # Application definition
 
@@ -130,6 +130,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
+
+SITE_ID = 2
 
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
