@@ -136,7 +136,7 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRs = (
-    os.path.join(BASE_DIR, 'flurry_static'),
+    os.path.join(BASE_DIR, '/app/flurry_static'),
 )
 
 # Simplified static file serving.
