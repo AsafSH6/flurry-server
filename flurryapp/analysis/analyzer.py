@@ -3,16 +3,8 @@ import django
 django.setup()
 from flurryapp.models import Driver
 import logging
-from time import sleep
 
 from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
-# from sklearn import svm, tree
-# from sklearn.ensemble import AdaBoostClassifier
-
-SLEEP_TIME = 0.2
-
-
-def SLEEP(): sleep(SLEEP_TIME)
 
 
 class Analyzer(object):
@@ -20,29 +12,26 @@ class Analyzer(object):
         logging.debug('\n\n** ANALYSIS **\n')
         self.dict_of_target_and_its_features_vectors = dict_of_target_and_its_features_vectors
         self.training_data_set, self.training_targets = self.__get_training_data()
-        self.algorithm = GaussianNB()
+        self.algorithm = MultinomialNB()
         logging.debug('Using Gaussian Naive Bayes\n\n')
-        SLEEP()
         self.__fit()
+        logging.getLogger().addHandler(logging.StreamHandler())
 
     def __fit(self):
         logging.debug('~ Fitting ~')
         self.algorithm.fit(self.training_data_set, self.training_targets)
-        SLEEP()
 
     def classify(self):
         logging.debug('\n** CLASSIFY DATA **\n')
 
         data_set, targets = self.__get_data()
         logging.debug('Number of data sets: {num_data_sets}'.format(num_data_sets=len(data_set)))
-        SLEEP()
 
         predictions = self.algorithm.predict(data_set)
 
         for prediction, target in zip(predictions, targets):
             logging.debug('Target {target} classified as: {prediction}'.format(target=target,
                                                                                prediction=prediction))
-            SLEEP()
 
         logging.debug('\n')
 
@@ -58,7 +47,6 @@ class Analyzer(object):
 
             logging.debug('Target {target} classified as Good Driver {percentage} % of the time\n'.format(target=target,
                                                                                                           percentage=percentage))
-            SLEEP()
 
     def __get_data(self):
         data_set, targets = list(), list()
@@ -72,8 +60,7 @@ class Analyzer(object):
         # good_driver = Driver.objects.get_good_driver_vectors()
         # bad_driver = Driver.objects.get_bad_driver_vectors()
         good_driver, bad_driver = Driver.objects.good_and_bad_driver_vectors()
-        print good_driver
-        print bad_driver
+
         training_data_set = good_driver + bad_driver
         training_targets = ['Good'] * len(good_driver) + ['Bad'] * len(bad_driver)
 
