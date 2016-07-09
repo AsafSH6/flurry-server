@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'ub491*rzo*5h1cw0ay8ywslt)zqgkn#-%*@ef
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ.get('DEBUG', True) in ('True', True) else False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['flurry.herokuapp.com']
 
 # Application definition
 
