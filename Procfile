@@ -1,0 +1,1 @@
+web: gunicorn flurry.wsgi --log-file -

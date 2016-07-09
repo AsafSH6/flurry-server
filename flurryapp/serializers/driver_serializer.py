@@ -4,8 +4,6 @@ from flurryapp.serializers.user_serializer import UserSerializer
 
 
 class DriverSerializer(serializers.HyperlinkedModelSerializer):
-    profiles = serializers.HyperlinkedRelatedField(many=True, view_name='profiles-detail', read_only=True)
-    cars = serializers.HyperlinkedRelatedField(many=True, view_name='cars-detail', read_only=True)
     user = UserSerializer(instance='user', read_only=True)
 
     """
@@ -16,4 +14,4 @@ class DriverSerializer(serializers.HyperlinkedModelSerializer):
     """
     class Meta:
         model = Driver
-        fields = ('id', 'user', 'name', 'creation_date', 'driving_data', 'profiles', 'cars')
+        fields = ('id', 'user', 'name', 'creation_date', 'driving_data')

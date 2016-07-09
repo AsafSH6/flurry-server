@@ -8,13 +8,11 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
-
-SUPER USER:
-    username: ubuntu
-    password: A12345678
 """
 
 import os
+import dj_database_url
+
 
 os.environ['PYTHONSTARTUP'] = 'startup.txt'
 
@@ -25,12 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ub491*rzo*5h1cw0ay8ywslt)zqgkn#-%*@ef_%ch76&(w(@8u'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'ub491*rzo*5h1cw0ay8ywslt)zqgkn#-%*@ef_%ch76&(w(@8u')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['']
 
 # Application definition
 
@@ -81,13 +79,6 @@ WSGI_APPLICATION = 'flurry.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -98,6 +89,9 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -144,3 +138,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRs = (
     os.path.join(BASE_DIR, 'flurry_static'),
 )
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
