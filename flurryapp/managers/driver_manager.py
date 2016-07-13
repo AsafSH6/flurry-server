@@ -11,7 +11,7 @@ class DriverManager(models.Manager):
         try:
             self.speed_limit_client = MaximumLimitationOfSpeedAPIClient()
         except ValueError as e:
-            pass
+            self.speed_limit_client = None
 
     def append_new_driving_data(self, driver_id, driving_data):
         '''
@@ -39,11 +39,18 @@ class DriverManager(models.Manager):
          ]
         '''
         driver = self.get(id=driver_id)
-        for data_unit_index, data_unit in enumerate(driving_data):
-            self.__append_maximum_limitation_of_speed(data_unit)
+        if self.speed_limit_client is not None:
+            for data_unit_index, data_unit in enumerate(driving_data):
+                self.__append_maximum_limitation_of_speed(data_unit)
 
         driver.driving_data.data.append(driving_data)
         driver.driving_data.save()
+
+    def __append_maximum_limitation_of_speed(self, data_unit):
+        data_unit['maximum_limition_of_speed'] = self.speed_limit_client.get_maximum_limitation_of_speed_in_kmph(
+            lat=data_unit['gps']['lat'],
+            lon=data_unit['gps']['lon']
+        )
 
     def check_for_duplicate_rides(self):
         for driver in self.all():

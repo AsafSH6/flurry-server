@@ -7,7 +7,7 @@ from flurryapp.models import *
 import requests as req
 import getpass
 
-SERVER_API_URL = 'http://54.152.123.228/api/v1/flurry/'
+SERVER_API_URL = 'http://52.90.153.90/api/v1/flurry/'
 
 
 def delete_current_db():
