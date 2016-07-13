@@ -25,7 +25,7 @@ you can get them from https://developer.here.com/
 #### Querying the server
 If you're familiar with Django Rest Framework then it will be very easy for you to understand the api.
 
-1. List of drivers:
+* List of drivers:
 ```bash
 $ curl https://flurry.herokuapp.com/api/v1/flurry/drivers/
 >> [
@@ -40,7 +40,7 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/drivers/
 ]
 ```
 _"driving_data"_: url of the driver driving data.  
-2. Specific driver: 
+* Specific driver: 
 ```bash
 $ curl https://flurry.herokuapp.com/api/v1/flurry/drivers/{driver_id}/
 >> {
@@ -51,7 +51,7 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/drivers/{driver_id}/
       "driving_data": "https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/"
     },
 ```   
-3. Driver driving data: 
+* Driver driving data: 
 list of lists where each list is a ride data.
 ride data is a list of jsons where each json is the driving data for specific time
 given that "Test Driver" driving data id id 3:
@@ -113,7 +113,7 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/
     ]
 }
 ```   
-4. Specific ride:
+* Specific ride:
 get the specific ride of driver by passing the parameter "ride"
 ride parameter starts from 0 (the first ride) and also supports negative index: ride=-1 => last ride
 ```bash
@@ -158,7 +158,7 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/?ride=2
     ...
 ]
 ```   
-5. specific data unit of specific ride:
+* specific data unit of specific ride:
 get the specific data unit by passing the parameter "data_unit". 
 data_unit parameter starts from 0 (the first data unit of the given ride) and also supports negative index: ride=-1 => last data unit
 ```bash
@@ -176,7 +176,7 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/?ride=2&data_un
         }
 }
 ```   
-6. get details about specific driver driving data:
+* get details about specific driver driving data:
 ```bash
 $ curl https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/len/
 >> {
