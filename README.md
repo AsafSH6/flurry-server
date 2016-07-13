@@ -16,8 +16,10 @@ or manage your own:
 - Clone Flurry project
 - Create PostgreSQL database
 - Edit flurry.settings
-- Set environment variables: SECRET_KEY, DEBUG, HERE_API_APP_ID and HERE_API_APP_CODE
+- Set environment variables: SECRET_KEY, DEBUG, DATABASE_URL, HERE_API_APP_ID and HERE_API_APP_CODE
 - Run: python manage.py makemigrations and then python manage.py migrate
+
+*DATABASE_URL* connection string: postgres://username:password@host/DB
 
 *HERE_API_APP* tokens are used in order to detect what is the maximum limitation of speed in a current location.
 you can get them from https://developer.here.com/

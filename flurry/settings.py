@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'ub491*rzo*5h1cw0ay8ywslt)zqgkn#-%*@ef_%ch76&(w(@8u')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ.get('DEBUG', True) in ('True', True) else False
+DEBUG = os.environ.get('DEBUG', True) in ('True', True)
 
 ALLOWED_HOSTS = ['.herokuapp.com']
 
@@ -82,19 +82,10 @@ WSGI_APPLICATION = 'flurry.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'flurryDB',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+DATABASES = {}
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config('DATABASE_URL')
+DATABASES['default'] = db_from_env
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
