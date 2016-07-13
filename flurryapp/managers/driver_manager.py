@@ -8,7 +8,10 @@ from flurryapp.utils.maximum_limitation_of_speed import MaximumLimitationOfSpeed
 class DriverManager(models.Manager):
     def __init__(self):
         super(DriverManager, self).__init__()
-        self.speed_limit_client = MaximumLimitationOfSpeedAPIClient()
+        try:
+            self.speed_limit_client = MaximumLimitationOfSpeedAPIClient()
+        except ValueError as e:
+            pass
 
     def append_new_driving_data(self, driver_id, driving_data):
         '''

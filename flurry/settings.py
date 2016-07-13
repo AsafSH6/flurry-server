@@ -30,6 +30,9 @@ DEBUG = True if os.environ.get('DEBUG', True) in ('True', True) else False
 
 ALLOWED_HOSTS = ['.herokuapp.com']
 
+API_APP_ID = os.environ.get('HERE_API_APP_ID', None)
+API_APP_CODE = os.environ.get('HERE_API_APP_CODE', None)
+
 # Application definition
 
 INSTALLED_APPS = [

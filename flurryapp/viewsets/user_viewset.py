@@ -30,11 +30,3 @@ class UserViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
         except KeyError, IndexError:
             return Response('driver name is missing', status=status.HTTP_400_BAD_REQUEST)
 
-    # @detail_route(methods=['GET'])
-    # def driver_id(self, request, *args, **kwargs):
-    #     user = self.get_object()
-    #     driver = user.drivers.first()
-    #     if driver is not None:
-    #         return Response(driver.pk, status=status.HTTP_200_OK)
-    #     else:
-    #         return Response(None, status=status.HTTP_200_OK)

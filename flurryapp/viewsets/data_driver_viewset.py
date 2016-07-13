@@ -28,16 +28,6 @@ class DataDriverViewSet(viewsets.ModelViewSet, mixins.NestedViewSetMixin):
             return super(DataDriverViewSet, self).retrieve(request, *args, **kwargs)
 
     @detail_route(methods=['GET'])
-    def merged(self, request, *args, **kwargs):
-        driving_data = self.get_object()
-        if len(driving_data) is not 0:
-            data = reduce(lambda x, y: x + y, driving_data.data)
-        else:
-            data = driving_data.data
-
-        return Response(data, status=status.HTTP_200_OK)
-
-    @detail_route(methods=['GET'])
     def len(self, request, *args, **kwargs):
         driving_data = self.get_object()
         return Response({'number of rides': len(driving_data),

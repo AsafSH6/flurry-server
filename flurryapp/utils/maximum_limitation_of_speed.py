@@ -1,26 +1,22 @@
 from __future__ import unicode_literals
 import requests as req
-import os
+from flurry.settings import API_APP_ID, API_APP_CODE
 
-
-API_APP_ID = os.environ.get('HERE_API_APP_ID', 'CYfTUgmUWqfylJcctLRO')
-API_APP_CODE = os.environ.get('HERE_API_APP_CODE', 'MW3akKCzl263Qtt7qHgIUQ')
-
-
-MAX_SPEED_API_URL = r'http://route.st.nlp.nokia.com/routing/6.2/getlinkinfo.json?' \
-                    r'waypoint={{gps_lat}},{{gps_lon}}' \
-                    r'&app_id={app_id}' \
-                    r'&app_code={app_code}'.format(app_id=API_APP_ID, app_code=API_APP_CODE)
 
 MS_TO_KMPH_FACTOR = 3.6
 
 
 class MaximumLimitationOfSpeedAPIClient(object):
     def __init__(self):
-        pass
+        if None in (API_APP_ID, API_APP_CODE):
+            raise ValueError('missing HERE API id or code')
+        self.max_speed_api_url = r'http://route.st.nlp.nokia.com/routing/6.2/getlinkinfo.json?' \
+                                 r'waypoint={{gps_lat}},{{gps_lon}}' \
+                                 r'&app_id={app_id}' \
+                                 r'&app_code={app_code}'.format(app_id=API_APP_ID, app_code=API_APP_CODE)
 
     def get_maximum_limitation_of_speed_in_kmph(self, lat, lon):
-        response = req.get(MAX_SPEED_API_URL.format(gps_lat=lat, gps_lon=lon))
+        response = req.get(self.max_speed_api_url.format(gps_lat=lat, gps_lon=lon))
         maximum_speed_limit_in_kmph = self.__get_maximum_speed_in_kmph_from_response(response=response)
         return maximum_speed_limit_in_kmph
 
