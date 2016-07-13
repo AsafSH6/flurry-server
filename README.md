@@ -39,9 +39,8 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/drivers/
     ...
 ]
 ```
-_"driving_data"_: url of the driver driving data.
-
-2. Specific driver:
+_"driving_data"_: url of the driver driving data.  
+2. Specific driver: 
 ```bash
 $ curl https://flurry.herokuapp.com/api/v1/flurry/drivers/{driver_id}/
 >> {
@@ -51,9 +50,8 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/drivers/{driver_id}/
       "creation_date": "2016-07-13", 
       "driving_data": "https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/"
     },
-```
-
-3. Driver driving data:
+```   
+3. Driver driving data: 
 list of lists where each list is a ride data.
 ride data is a list of jsons where each json is the driving data for specific time
 given that "Test Driver" driving data id id 3:
@@ -114,8 +112,7 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/
         ....
     ]
 }
-```
-
+```   
 4. Specific ride:
 get the specific ride of driver by passing the parameter "ride"
 ride parameter starts from 0 (the first ride) and also supports negative index: ride=-1 => last ride
@@ -160,8 +157,7 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/?ride=2
     },
     ...
 ]
-```
-
+```   
 5. specific data unit of specific ride:
 get the specific data unit by passing the parameter "data_unit". 
 data_unit parameter starts from 0 (the first data unit of the given ride) and also supports negative index: ride=-1 => last data unit
@@ -179,8 +175,7 @@ $ curl https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/?ride=2&data_un
             "lon": "34.92453954"
         }
 }
-```
-
+```   
 6. get details about specific driver driving data:
 ```bash
 $ curl https://flurry.herokuapp.com/api/v1/flurry/data-drivers/3/len/
